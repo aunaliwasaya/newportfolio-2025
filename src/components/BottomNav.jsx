@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Home, Info, Briefcase } from "lucide-react";
+import { Home, User, Briefcase } from "lucide-react";
 import { NavLink, useNavigate } from "react-router-dom";
 import codeuplogo from "../assets/codeup-favicon.png";
 import { toggleTheme } from "../store/themeSlice"; // Correctly import toggleTheme action
@@ -48,7 +48,7 @@ function BottomNav() {
               : "opacity-50 p-2 bg-gray-600 text-white hover:bg-black rounded-full transition-all duration-300 hover:opacity-100 w-12 h-12 flex justify-center items-center"
           }
         >
-          <Info size={24} />
+          <User size={24} /> {/* Changed from Info to User */}
         </NavLink>
 
         {/* Logo in the center */}
@@ -60,15 +60,9 @@ function BottomNav() {
 
         {/* Theme Toggle and Home Navigation */}
         <div className="relative cursor-pointer w-14 h-14 rounded-full bg-gradient-to-b from-gray-100 to-gray-300 border-2 flex items-center justify-center">
-          <img
-            src={isDarkMode ? "path/to/darkmodenavbar" : "path/to/profile"} // Replace with actual paths
-            alt=""
-            className="max-w-full max-h-full mt-1"
-            onClick={navigatetohome}
-          />
           <div
             onClick={toggleThemeHandler}
-            className="text-white p-[5px] animate-pulse hover:animate-none bg-black shadow-md rounded-full w-8 h-8 absolute left-12 hover:bg-blue-950 hover:shadow-black top-0"
+            className="text-white p-[5px] animate-pulse hover:animate-none bg-black shadow-md rounded-full w-12 h-12 flex justify-center items-center hover:bg-blue-950 hover:shadow-black"
           >
             {isDarkMode ? "🌞" : "🌙"}
           </div>
