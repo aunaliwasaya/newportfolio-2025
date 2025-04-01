@@ -46,7 +46,7 @@ export default function Navbar() {
         <div
   className={`relative overflow-hidden flex justify-center items-center w-[100%] h-5 py-1 mb-[4px] mx-auto rounded-md backdrop-filter backdrop-blur-lg ${
     isDarkMode
-      ? "bg-white text-transparent shadow-lg shadow-blue-500"
+      ? "bg-white text-transparent shadow-lg shadow-gray"
       : "bg-black text-transparent border shadow-md text-black border-gray-500"
   }`}
 >
@@ -57,9 +57,9 @@ export default function Navbar() {
     className="w-full"
   >
     <p
-      className={`flex justify-center items-center animate-marquee whitespace-nowrap  ${
+      className={`flex justify-center items-center animate-marquee whitespace-nowrap p-3 ${
         isDarkMode
-          ? "text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600"
+          ? "text-transparent bg-clip-text bg-gradient-to-r from-black"
           : "text-transparent bg-clip-text bg-gradient-to-r from-slate-100 to-white"
       }`}
     >
@@ -77,7 +77,7 @@ export default function Navbar() {
             className={`backdrop-filter backdrop-blur-lg  
   ${
     isDarkMode
-      ? "bg-white bg-opacity-75 shadow-md shadow-blue-500"
+      ? "bg-white bg-opacity-75 shadow-md shadow-white"
       : "bg-white bg-opacity-40 shadow-md shadow-gray-500 border-gray-500 "
   } 
   rounded-xl shadow-md flex items-center justify-between px-3 py-1`}
