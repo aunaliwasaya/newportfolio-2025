@@ -31,7 +31,7 @@ function BottomNav() {
         {/* Replace with your image path */}
     
         <a href="https://codeup.solutions/" target="_blank" rel="noopener noreferrer">
-  <img src={codeuplogo} alt="Codeup Logo" className="w-12 h-12" />
+  <img src={codeuplogo} alt="Codeup Logo" className="w-20 h-18 -mt-14 " />
 </a>
       </div>
 
