@@ -55,7 +55,7 @@ export default function Navbar() {
     className="w-full"
   >
     <p
-      className={`flex justify-center items-center animate-marquee whitespace-nowrap font-bold ${
+      className={`flex justify-center items-center animate-marquee whitespace-nowrap  ${
         isDarkMode
           ? "text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600"
           : "text-transparent bg-clip-text bg-gradient-to-r from-slate-100 to-white"
