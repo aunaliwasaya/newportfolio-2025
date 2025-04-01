@@ -56,6 +56,13 @@ function BottomNav() {
           <a href="https://codeup.solutions/" target="_blank" rel="noopener noreferrer">
             <img src={codeuplogo} alt="Codeup Logo" className="w-16 h-16 -mt-14" />
           </a>
+          <a href="https://codeup.solutions/" target="_blank" rel="noopener noreferrer">
+          <p className="ml-1 font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-800">Codeup.
+          <span className="ml-1 font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-800 to-blue-400">
+  Solutions
+</span>
+          </p>
+          </a>
         </div>
 
         {/* Theme Toggle and Home Navigation */}
