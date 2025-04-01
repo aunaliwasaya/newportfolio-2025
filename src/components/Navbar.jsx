@@ -47,7 +47,7 @@ export default function Navbar() {
   className={`relative overflow-hidden flex justify-center items-center w-[100%] h-5 py-1 mb-[4px] mx-auto rounded-md backdrop-filter backdrop-blur-lg ${
     isDarkMode
       ? "bg-white text-transparent shadow-lg shadow-gray"
-      : "bg-black text-transparent border shadow-md text-black border-gray-500"
+      : "bg-gradient-to-r from-blue-900 via-black to-white bg-opacity-75 shadow-md shadow-white text-transparent border shadow-md text-black border-gray-500"
   }`}
 >
   <a
@@ -75,11 +75,12 @@ export default function Navbar() {
         <div className="w-[100%] mx-auto  relative">
           <navbar
             className={`backdrop-filter backdrop-blur-lg  
-  ${
-    isDarkMode
-      ? "bg-white bg-opacity-75 shadow-md shadow-white"
-      : "bg-white bg-opacity-40 shadow-md shadow-gray-500 border-gray-500 "
-  } 
+              ${
+                isDarkMode
+                  ? "bg-gradient-to-l from-blue-900 via-black to-white bg-opacity-75 shadow-md shadow-white"
+                  : "bg-white bg-opacity-40 shadow-md shadow-gray-500 border-gray-500"
+              }
+              
   rounded-xl shadow-md flex items-center justify-between px-3 py-1`}
           >
             {/* image dark and light mode  */}

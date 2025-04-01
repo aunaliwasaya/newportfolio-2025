@@ -23,7 +23,7 @@ function BottomNav() {
       className={`fixed bottom-0 left-0 m-1 w-[98%] p-3 md:hidden rounded-lg flex justify-center items-center shadow-md border 
         backdrop-filter backdrop-blur-lg
         ${isDarkMode
-          ? "bg-white bg-opacity-80 text-blue-600 border-gray-300"
+          ? "bg-gradient-to-l from-blue-900 via-black to-white bg-opacity-75 shadow-md shadow-white text-blue-600 border-gray-300"
           : "bg-black bg-opacity-80 text-white border-gray-200"}`}
     >
       <div className="flex justify-between w-full max-w-md items-center">
