@@ -107,7 +107,7 @@ export default function Navbar() {
          
             <p
   className={`${
-    isDarkMode ? "text-green-400" : "text-black"
+    isDarkMode ? "text-green-600" : "text-black"
   } animate-pulse text-lg font-semibold`}
 >
   Let's Chat!
