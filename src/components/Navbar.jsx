@@ -44,10 +44,10 @@ export default function Navbar() {
       <header className="py-1 px-2 fixed top-0 left-0 w-full z-40 ">
         {/* Codeup,solutions announcement bar */}
         <div
-  className={`relative overflow-hidden flex justify-center items-center w-[100%] h-5 py-1 mb-[4px] mx-auto rounded-md backdrop-filter backdrop-blur-lg ${
+  className={`relative overflow-hidden flex justify-center backdrop-filter items-center w-[100%] h-5 py-1 mb-[4px] mx-auto rounded-md  backdrop-blur-lg ${
     isDarkMode
       ? "bg-white text-transparent shadow-lg shadow-gray"
-      : "bg-gradient-to-r from-blue-900 via-black to-white bg-opacity-75 shadow-md shadow-white text-transparent border shadow-md text-black border-gray-500"
+      : "bg-black backdrop-filter backdrop-blur-lg shadow-md shadow-white text-transparent border  text-black border-gray-500"
   }`}
 >
   <a

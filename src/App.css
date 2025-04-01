@@ -220,10 +220,10 @@ span.vertical-timeline-element-date{
 
 @keyframes marquee {
   from {
-    transform: translateX(60%);
+    transform: translateX(99%);
   }
   to {
-    transform: translateX(-50%);
+    transform: translateX(-99%);
   }
 }
 
