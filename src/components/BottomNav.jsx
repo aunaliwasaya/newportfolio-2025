@@ -59,14 +59,15 @@ function BottomNav() {
         </div>
 
         {/* Theme Toggle and Home Navigation */}
-        <div className="relative cursor-pointer w-14 h-14 rounded-full bg-gradient-to-b from-gray-100 to-gray-300 border-2 flex items-center justify-center">
-          <div
-            onClick={toggleThemeHandler}
-            className="text-white p-[5px] animate-pulse hover:animate-none bg-black shadow-md rounded-full w-12 h-12 flex justify-center items-center hover:bg-blue-950 hover:shadow-black"
-          >
-            {isDarkMode ? "🌞" : "🌙"}
-          </div>
-        </div>
+        <div className=" backdrop-blur-lg bg-gradient-to-l from-black to-slate-600 rounded-full p-2 transition-all duration-300 w-12 h-12 flex justify-center items-center">
+  <div
+    onClick={toggleThemeHandler}
+    className="text-white p-[5px] bg-black  rounded-full w-12 h-12 flex justify-center items-center hover:bg-black hover:shadow-black"
+  >
+    {isDarkMode ? "🌞" : "🌙"}
+  </div>
+</div>
+
 
         {/* Certificates */}
         <NavLink
