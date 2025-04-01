@@ -10,6 +10,8 @@ import WhatIOfferMobile from "./WhatIOfferMobile";
 import { FaBars, FaTimes } from "react-icons/fa"; 
 import PortfolioModal from "../pages/PortfolioModal";
 import WhatsAppMeButton from "../pages/WhatsAppMeButton";
+import BottomNav from "./BottomNav";
+
 
 
 export default function Navbar() {
@@ -417,6 +419,9 @@ export default function Navbar() {
             </>
           )}
         </div>
+        {/* bottom bar */}
+        < BottomNav/>
+ 
       </header>
     </>
   );
