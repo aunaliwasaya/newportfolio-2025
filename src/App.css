@@ -237,3 +237,9 @@ span.vertical-timeline-element-date{
   .animate-marquee {
     animation-duration: 10s;
   }}
+
+
+
+  .top-\[86px\] {
+    top: 101px!important;
+}
