@@ -54,7 +54,7 @@ function BottomNav() {
         {/* Logo in the center */}
         <div className="flex flex-col items-center">
           <a href="https://codeup.solutions/" target="_blank" rel="noopener noreferrer">
-            <img src={codeuplogo} alt="Codeup Logo" className="w-20 h-20 -mt-14" />
+            <img src={codeuplogo} alt="Codeup Logo" className="w-16 h-16 -mt-14" />
           </a>
         </div>
 
