@@ -54,7 +54,7 @@ export default function Navbar() {
             className="w-full"
           >
             <p
-              className={`w-full text-[12px] flex justify-center items-center animate-marquee whitespace-nowrap  ${
+              className={`w-full text-[12px] lg:text-[16px] flex justify-center items-center animate-marquee whitespace-nowrap  ${
                 isDarkMode
                   ? "text-transparent bg-clip-text bg-gradient-to-r from-black"
                   : "text-transparent bg-clip-text bg-gradient-to-r from-slate-100 to-white"
