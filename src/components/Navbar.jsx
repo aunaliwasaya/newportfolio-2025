@@ -11,6 +11,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import PortfolioModal from "../pages/PortfolioModal";
 import WhatsAppMeButton from "../pages/WhatsAppMeButton";
 import BottomNav from "./BottomNav";
+import codeuplogo from "../assets/codeup-favicon.png"
 
 
 
@@ -212,6 +213,17 @@ export default function Navbar() {
                   />
                 </svg>
               </NavLink>
+              {/* codeup.solutions button */}
+                    <a
+                          href="https://www.codeup.solutions"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={`backdrop-blur-lg bg-gradient-to-l from-black to-slate-600 rounded-full flex justify-start items-center transition-all  w-12 h-12 p-2  duration-300  border-gray-100 hover:border-gray-200 drop-shadow-sm ${
+                            isDarkMode ? "text-black hover:shadow-white shadow-md" : "text-black hover:shadow-black shadow-lg"
+                          }`}
+                        >
+                          <img src={codeuplogo} alt="Codeup" className="w-[28px] h-[28px] object-contain rounded-full" />
+                        </a>
 
               {/* Dark Light Mode */}
               {/* Theme Toggle Button */}
