@@ -411,32 +411,30 @@ export default function Navbar() {
                     </NavLink>
                   </div>
                   {/* codeup.solutions button mobile menu */}
-                  <a
-                    href="https://www.codeup.solutions"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`backdrop-blur-lg bg-gradient-to-l from-black to-slate-600 rounded-full flex justify-start items-center transition-all  w-12 h-12 p-2  duration-300  border-gray-100 hover:border-gray-200 drop-shadow-sm ${
-                      isDarkMode
-                        ? "text-black hover:shadow-white shadow-md"
-                        : "text-white hover:shadow-black shadow-lg"
-                    }`}
+           
+                  <div
+                    onClick={toggleMenu}
+                    className="flex justify-start items-center gap-3 font-semibold"
                   >
-                    <img
+                    <a
+                      href="https://www.codeup.solutions"
+                      target="_blank"
+                      className="p-2 backdrop-blur-lg bg-gradient-to-r from-black to-slate-600 text-white hover:bg-gray-300 rounded-full transition-all duration-300 hover:opacity-100 w-12 h-12 flex justify-center items-center"
+                    >
+                      <img
                       src={codeuplogo}
                       alt="Codeup"
                       className="w-[24px] h-[24px]  rounded-full"
                     />
-                    <a
-                      href="https://www.codeup.solutions"
-                      className={`ml-6 object-contain rounded-full font-semibold ${
-                        isDarkMode ? "text-white" : "text-black"
-                      }`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      CodeUp.Solutions
                     </a>
-                  </a>
+                    <a
+                      href="https://admin-dashboard-portfolio-aun.vercel.app/"
+                      target="_blank"
+                      className="text-white"
+                    >
+                      <p className="text-gray-900">    CodeUp.Solutions</p>
+                    </a>
+                  </div>
 
                   {/* Dark/Light Mode Toggle */}
                   <div className="flex justify-start items-center gap-3 font-semibold">
