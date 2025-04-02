@@ -461,7 +461,7 @@ function App() {
           </div>
 
           {/* Social icons */}
-          <div className="fixed top-1/2 left-[-90px]">
+          {/* <div className="fixed top-1/2 left-[-90px]">
     
             <div
    className={`
@@ -480,13 +480,34 @@ function App() {
             {isIconsVisible && (
               <div
                 onClick={toggleIconsVisibility}
-                className="rotate-[-90deg] translate-x-14 -translate-y-12"
+                className="rotate-[-90deg] translate-x-5 -translate-y-12"
               >
                 <Social2 />
               </div>
             )}
                
-          </div>
+          </div> */}
+          <div className="fixed top-1/2 left-[-90px]">
+  <div
+    className={`
+      ${isDarkMode 
+        ? "text-blue-white bg-slate-900 hover:text-white border border-white" 
+        : "text-black bg-gradient-to-b from-gray-300 to-gray-100 hover:text-pink-600 border"
+      } 
+      backdrop-filter backdrop-blur-lg border border-transparent rounded-xl shadow-xl h-[40px] w-[200px] flex items-center justify-center rotate-90 hover:bg-black cursor-pointer transition-all ease-in-out duration-500
+    `}
+    onClick={toggleIconsVisibility}
+  >
+    <p className="rotate-180 font-bold pt-3">Let's Connect!</p>
+  </div>
+  <div
+    className={`transition-transform duration-500 ease-in-out ${isIconsVisible ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"}`}
+  >
+    <div onClick={toggleIconsVisibility} className="rotate-[-90deg] translate-x-5 -translate-y-12 transition-all duration-500 ease-in-out">
+      <Social2 />
+    </div>
+  </div>
+</div>
 
      
         </div>
