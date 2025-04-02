@@ -54,13 +54,13 @@ export default function Navbar() {
             className="w-full"
           >
             <p
-              className={`w-full flex justify-center items-center animate-marquee whitespace-nowrap  ${
+              className={`w-full text-[12px] flex justify-center items-center animate-marquee whitespace-nowrap  ${
                 isDarkMode
                   ? "text-transparent bg-clip-text bg-gradient-to-r from-black"
                   : "text-transparent bg-clip-text bg-gradient-to-r from-slate-100 to-white"
               }`}
             >
-              "{"  "}Check Out My Agency Website {"  "}
+              "Check Out My Agency Website {"  "}
               <span className="pl-2 font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-800 to-blue-400">
                 Codeup.Solutions"
               </span>
