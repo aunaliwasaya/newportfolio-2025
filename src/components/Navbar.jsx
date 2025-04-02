@@ -428,7 +428,7 @@ export default function Navbar() {
                     />
                     </a>
                     <a
-                      href="https://admin-dashboard-portfolio-aun.vercel.app/"
+                      href="https://www.codeup.solutions"
                       target="_blank"
                       className="text-white"
                     >
