@@ -75,7 +75,7 @@ export default function Navbar() {
               ${
                 isDarkMode
                   ? "bg-gradient-to-l from-blue-900 via-black to-white bg-opacity-75 shadow-md shadow-white"
-                  : "bg-white bg-opacity-40 shadow-md shadow-gray-500 border-gray-500"
+                  : "bg-black bg-opacity-80 shadow-md shadow-gray-500 border-gray-500"
               }
               
   rounded-xl shadow-md flex items-center justify-between px-3 py-1`}
@@ -105,7 +105,7 @@ export default function Navbar() {
 
               <p
                 className={`${
-                  isDarkMode ? "text-green-600" : "text-black"
+                  isDarkMode ? "text-green-600" : "text-green-400"
                 } animate-pulse text-lg font-semibold`}
               >
                 Let's Chat!
@@ -121,7 +121,10 @@ export default function Navbar() {
                     <FaTimes />
                   </div>
                 ) : (
-                  <FaBars />
+                  <div className="text-white"> 
+                       <FaBars />
+                  </div>
+               
                 )}
               </p>
             </div>
