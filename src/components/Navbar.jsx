@@ -7,13 +7,11 @@ import { toggleTheme } from "../store/themeSlice";
 import darkmodenavbar from "../assets/navbar-darkmode.png";
 import { useState } from "react";
 import WhatIOfferMobile from "./WhatIOfferMobile";
-import { FaBars, FaTimes } from "react-icons/fa"; 
+import { FaBars, FaTimes } from "react-icons/fa";
 import PortfolioModal from "../pages/PortfolioModal";
 import WhatsAppMeButton from "../pages/WhatsAppMeButton";
 import BottomNav from "./BottomNav";
-import codeuplogo from "../assets/codeup-favicon.png"
-
-
+import codeuplogo from "../assets/codeup-favicon.png";
 
 export default function Navbar() {
   const dispatch = useDispatch();
@@ -24,9 +22,8 @@ export default function Navbar() {
   // Toggle menu visibility function
   const toggleMenu = () => {
     setMenuVisible(!menuVisible);
-    console.log(menuVisible)
+    console.log(menuVisible);
   };
-
 
   const navigate = useNavigate(); // Initialize useNavigate
 
@@ -41,38 +38,37 @@ export default function Navbar() {
 
   return (
     <>
-   
       <header className="py-1 px-2 fixed top-0 left-0 w-full z-40 ">
         {/* Codeup,solutions announcement bar */}
         <div
-  className={`relative overflow-hidden flex justify-center backdrop-filter items-center w-[100%] h-5 py-1 mb-[4px] mx-auto rounded-md  backdrop-blur-lg ${
-    isDarkMode
-      ? "bg-white text-transparent shadow-lg shadow-gray"
-      : "bg-black backdrop-filter backdrop-blur-lg shadow-md shadow-white text-transparent border  text-black border-gray-500"
-  }`}
->
-  <a
-    href="https://codeup.solutions/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="w-full"
-  >
-    <p
-      className={`flex justify-center items-center animate-marquee whitespace-nowrap p-3 ${
-        isDarkMode
-          ? "text-transparent bg-clip-text bg-gradient-to-r from-black"
-          : "text-transparent bg-clip-text bg-gradient-to-r from-slate-100 to-white"
-      }`}
-    >
-      Check Out My Agency Website <span className=" font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-800 to-blue-400">
-  Codeup.Solutions
-</span>
+          className={`relative overflow-hidden flex justify-center backdrop-filter items-center w-[100%] h-5 py-1 mb-[4px] mx-auto rounded-md  backdrop-blur-lg ${
+            isDarkMode
+              ? "bg-white text-transparent shadow-lg shadow-gray"
+              : "bg-black backdrop-filter backdrop-blur-lg shadow-md shadow-white text-transparent border  text-black border-gray-500"
+          }`}
+        >
+          <a
+            href="https://codeup.solutions/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full"
+          >
+            <p
+              className={`flex justify-center items-center animate-marquee whitespace-nowrap p-3 ${
+                isDarkMode
+                  ? "text-transparent bg-clip-text bg-gradient-to-r from-black"
+                  : "text-transparent bg-clip-text bg-gradient-to-r from-slate-100 to-white"
+              }`}
+            >
+              Check Out My Agency Website{" "}
+              <span className=" font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-800 to-blue-400">
+                Codeup.Solutions
+              </span>
+            </p>
+          </a>
+        </div>
 
-    </p>
-  </a>
-</div>
-
-    {/* Navbar */}
+        {/* Navbar */}
         <div className="w-[100%] mx-auto  relative">
           <navbar
             className={`backdrop-filter backdrop-blur-lg  
@@ -101,20 +97,20 @@ export default function Navbar() {
               </div>
             </div>
             {/* button menu  */}
-                     {/* Whatsapp me button */}
-           <div className=" md:hidden  flex justify-center items-center gap-2">
-            <div className="w-10 h-10 rounded-full bg-gray-800 shadow-lg shadow-green-400">
-            <WhatsAppMeButton/>
+            {/* Whatsapp me button */}
+            <div className=" md:hidden  flex justify-center items-center gap-2">
+              <div className="w-10 h-10 rounded-full bg-gray-800 shadow-lg shadow-green-400">
+                <WhatsAppMeButton />
+              </div>
+
+              <p
+                className={`${
+                  isDarkMode ? "text-green-600" : "text-black"
+                } animate-pulse text-lg font-semibold`}
+              >
+                Let's Chat!
+              </p>
             </div>
-         
-            <p
-  className={`${
-    isDarkMode ? "text-green-600" : "text-black"
-  } animate-pulse text-lg font-semibold`}
->
-  Let's Chat!
-</p>
-          </div>
             <div
               onClick={toggleMenu}
               className="lg:hidden flex flex-col gap-[3px] sm:gap-3 px-5 py-1 items-center cursor-pointer text-center"
@@ -130,7 +126,7 @@ export default function Navbar() {
               </p>
             </div>
 
-            {/* Nav links */}
+            {/* Nav links for desktop menu*/}
             <div className="hidden lg:flex gap-[3px] sm:gap-3 px-5 py-1 items-center">
               {/* featured */}
               {/* New Icon for "🏆" - Link to Project */}
@@ -214,16 +210,22 @@ export default function Navbar() {
                 </svg>
               </NavLink>
               {/* codeup.solutions button */}
-                    <a
-                          href="https://www.codeup.solutions"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className={`backdrop-blur-lg bg-gradient-to-l from-black to-slate-600 rounded-full flex justify-start items-center transition-all  w-12 h-12 p-2  duration-300  border-gray-100 hover:border-gray-200 drop-shadow-sm ${
-                            isDarkMode ? "text-black hover:shadow-white shadow-md" : "text-black hover:shadow-black shadow-lg"
-                          }`}
-                        >
-                          <img src={codeuplogo} alt="Codeup" className="w-[28px] h-[28px] object-contain rounded-full" />
-                        </a>
+              <a
+                href="https://www.codeup.solutions"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`backdrop-blur-lg bg-gradient-to-l from-black to-slate-600 rounded-full flex justify-start items-center transition-all  w-12 h-12 p-2  duration-300  border-gray-100 hover:border-gray-200 drop-shadow-sm ${
+                  isDarkMode
+                    ? "text-black hover:shadow-white shadow-md"
+                    : "text-black hover:shadow-black shadow-lg"
+                }`}
+              >
+                <img
+                  src={codeuplogo}
+                  alt="Codeup"
+                  className="w-[28px] h-[28px] object-contain rounded-full"
+                />
+              </a>
 
               {/* Dark Light Mode */}
               {/* Theme Toggle Button */}
@@ -233,12 +235,11 @@ export default function Navbar() {
               >
                 {isDarkMode ? "🌞" : "🌙"}
               </button>
-                  {/* Whatsapp me button */}
-                  <div className=" hidden  md:block w-10 h-10 rounded-full bg-gray-800 ">
-          <WhatsAppMeButton/>
-          </div>
+              {/* Whatsapp me button */}
+              <div className=" hidden  md:block w-10 h-10 rounded-full bg-gray-800 ">
+                <WhatsAppMeButton />
+              </div>
             </div>
-     
 
             {/* hire me button   */}
             <div className="hidden md:block justify-center">
@@ -270,11 +271,12 @@ export default function Navbar() {
           {menuVisible && (
             <>
               <div
-                
                 className={`w-[100%] h-screen z-[10000] absolute top-[68px] left-0 lg:hidden 
                   items-center gap-[3px] sm:gap-3 py-1 mx-auto transition-all duration-500 ease-in-out transform 
                   backdrop-filter backdrop-blur-lg p-1 rounded-2xl border border-transparent
-                  ${menuVisible ? "slide-from-left" : "slide-from-left"} transition-all duration-500 ease-in-out transform `}
+                  ${
+                    menuVisible ? "slide-from-left" : "slide-from-left"
+                  } transition-all duration-500 ease-in-out transform `}
               >
                 <div
                   className=" w-full h-[100%] overflow-y-auto custom-scrollbar bg-white
@@ -408,6 +410,33 @@ export default function Navbar() {
                       <p> Certificates</p>
                     </NavLink>
                   </div>
+                  {/* codeup.solutions button mobile menu */}
+                  <a
+                    href="https://www.codeup.solutions"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`backdrop-blur-lg bg-gradient-to-l from-black to-slate-600 rounded-full flex justify-start items-center transition-all  w-12 h-12 p-2  duration-300  border-gray-100 hover:border-gray-200 drop-shadow-sm ${
+                      isDarkMode
+                        ? "text-black hover:shadow-white shadow-md"
+                        : "text-white hover:shadow-black shadow-lg"
+                    }`}
+                  >
+                    <img
+                      src={codeuplogo}
+                      alt="Codeup"
+                      className="w-[24px] h-[24px]  rounded-full"
+                    />
+                    <a
+                      href="https://www.codeup.solutions"
+                      className={`ml-6 object-contain rounded-full font-semibold ${
+                        isDarkMode ? "text-white" : "text-black"
+                      }`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      CodeUp.Solutions
+                    </a>
+                  </a>
 
                   {/* Dark/Light Mode Toggle */}
                   <div className="flex justify-start items-center gap-3 font-semibold">
@@ -420,9 +449,8 @@ export default function Navbar() {
                     <p onClick={toggleThemeHandler}> Toggle Theme</p>
                   </div>
 
-               
                   <div className="mt-10">
-                  <PortfolioModal/>
+                    <PortfolioModal />
                   </div>
                   <div className="w-[full] p-2 -ml-3 sm:mx-auto sm:w-[360px] mb-10 ">
                     <WhatIOfferMobile />
@@ -433,8 +461,7 @@ export default function Navbar() {
           )}
         </div>
         {/* bottom bar */}
-        < BottomNav/>
- 
+        <BottomNav />
       </header>
     </>
   );
