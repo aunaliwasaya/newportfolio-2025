@@ -10,11 +10,16 @@ import Accordians from "./Accordians";
 import ReactSlider from "./ReactSlider";
 import WordpressSlider from "./WordpressSlider";
 import FramerSlider from "./FramerSlider";
+import { FaMobileAlt } from "react-icons/fa";
+
 
 
 
 
 export default function Projects() {
+
+  // mobile one and two column
+  const [isTwoColumn, setIsTwoColumn] = useState(false);
 
     const isDarkMode = useSelector((state) => state.theme.isDarkMode);
   const configData = getConfigData();
@@ -140,7 +145,7 @@ export default function Projects() {
               </svg>
             </button>
           </div>
-          <div className="flex flex-col">
+          <div className="sm:flex flex-col hidden ">
             {(showAll ? projects : projects.slice(0, 4)).map((project, index) => (
               <a
                 key={index}
@@ -181,6 +186,92 @@ export default function Projects() {
               </a>
             ))}
           </div>
+          {/* for mobile devices only */}
+          {/* <div className="grid grid-cols-2 gap-2 sm:flex sm:flex-col">
+            {(showAll ? projects : projects.slice(0, 4)).map((project, index) => (
+              <a
+                key={index}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+                className="  drop-shadow-md card bg-white rounded-lg px-5 py-3 gap-x-3 flex mb-5 md:flex-none md:flex-row hover:-translate-y-1 hover:scale-100 duration-300 transition ease-in-out delay-150 hover:shadow-sm border border-gray-200 hover:border-gray-300"
+                href={project["project-link"]}
+              >
+                <div className=" flex flex-col lg:flex-row justify-around gap-2 w-full">
+                <div className="rounded-full  overflow-hidden flex items-center justify-center  ">
+                  <div className="card-image w-16 h-16 rounded-full overflow-hidden">
+                    <img
+                      className="w-full h-full"
+                      src={project["project-image-url"]}
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div className="w-[80%] mx-auto flex flex-col justify-center">
+                  <h1 className="font-medium text-gray-800 text-lg">{project["project-name"]}</h1>
+                  <p className="text-gray-500 text-md">{project["project-desc"]}</p>
+                </div>
+                <button className="w-[20%]  ml-auto hidden md:inline-block">
+                  <svg
+                    className={svgClass}
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="2"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                    />
+                  </svg>
+                </button>
+                </div>
+              </a>
+            ))}
+          </div> */}
+          <div className="flex justify-end gap-2 mb-3 sm:hidden">
+  <button
+    onClick={() => setIsTwoColumn(false)}
+    className={`p-2 rounded-md border ${!isTwoColumn ? 'bg-blue-500 text-white' : 'bg-white text-gray-700'}`}
+  >
+    <FaMobileAlt className="w-5 h-5" />
+  </button>
+  <button
+    onClick={() => setIsTwoColumn(true)}
+    className={`p-2 rounded-md border ${isTwoColumn ? 'bg-blue-500 text-white' : 'bg-white text-gray-700'}`}
+  >
+    <div className="flex space-x-1">
+      <FaMobileAlt className="w-5 h-5" />
+      <FaMobileAlt className="w-5 h-5" />
+    </div>
+  </button>
+</div>
+
+{/* Project cards visible only in mobile */}
+<div className={`sm:hidden grid ${isTwoColumn ? 'grid-cols-2' : 'grid-cols-1'} gap-2`}>
+  {(showAll ? projects : projects.slice(0, 4)).map((project, index) => (
+    <a
+      key={index}
+      className="drop-shadow-md card bg-white rounded-lg px-5 py-3 flex flex-col gap-3 border border-gray-200 hover:border-gray-300 transition duration-300"
+      href={project["project-link"]}
+    >
+      <div className="flex flex-col items-center">
+        <div className="card-image w-16 h-16 rounded-full overflow-hidden mb-2">
+          <img
+            className="w-full h-full"
+            src={project["project-image-url"]}
+            alt=""
+          />
+        </div>
+        <div className="text-center">
+          <h1 className="font-medium text-gray-800 text-lg">{project["project-name"]}</h1>
+          <p className="text-gray-500 text-md">{project["project-desc"]}</p>
+        </div>
+      </div>
+    </a>
+  ))}
+</div>
         </div>
 
 
