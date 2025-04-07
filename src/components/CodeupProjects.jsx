@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { FaMobileAlt, FaMobile } from "react-icons/fa"; // import the mobile icons
-import project1 from "../../src/assets/project-one.png";
-import project2 from "../../src/assets/project-two.png";
-import project3 from "../../src/assets/project-three.png";
-import project4 from "../../src/assets/project-four.png";
+import project1 from "../../src/assets/project-one.webp";
+import project2 from "../../src/assets/project-two.webp";
+import project3 from "../../src/assets/project-three.webp";
+import project4 from "../../src/assets/project-four.webp";
 
 const CodeupProjects = () => {
   const [isSingleColumn, setIsSingleColumn] = useState(false);
