@@ -234,7 +234,7 @@ export default function Projects() {
             ))}
           </div>
       
-          <div className="flex justify-end gap-2 mb-3 sm:hidden sticky top-[7%] z-50">
+          <div className="flex justify-end gap-2 mb-3 sm:hidden sticky top-[10%] z-50">
   <button
     onClick={() => setIsTwoColumn(false)}
     className={`p-2 rounded-md  shadow-lg shadow-gray-700 ${!isTwoColumn ? 'bg-gradient-to-l from-blue-600 to-gray-500 text-white' : 'bg-white text-gray-700'}`}
@@ -455,7 +455,7 @@ export default function Projects() {
 </div>
 
 {/* Layout Toggle Buttons for Mobile */}
-<div className="flex justify-end gap-2 mb-3 sm:hidden sticky top-[7%] z-50">
+<div className="flex justify-end gap-2 mb-3 sm:hidden sticky top-[10%] z-50">
   <button
     onClick={() => setIsTwoColumnwordpress(false)}
     className={`p-2 rounded-md shadow-lg shadow-gray-700 ${!isTwoColumnwordpress ? 'bg-gradient-to-l from-blue-600 to-gray-500 text-white text-white' : 'bg-white text-gray-700'}`}
@@ -639,7 +639,7 @@ export default function Projects() {
   </div>
 
   {/* Toggle Buttons for Mobile */}
-  <div className="flex justify-end gap-2 mb-3 sm:hidden sticky top-[7%] z-50">
+  <div className="flex justify-end gap-2 mb-3 sm:hidden sticky top-[10%] z-50">
     <button
       onClick={() => setIsTwoColumnframer(false)}
       className={`p-2 rounded-md shadow-lg shadow-gray-700 ${!isTwoColumnframer ? 'bg-gradient-to-l from-blue-600 to-gray-500 text-white' : 'bg-white text-gray-700'}`}
