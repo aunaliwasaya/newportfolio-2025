@@ -212,8 +212,25 @@ export default function Navbar() {
                   />
                 </svg>
               </NavLink>
+              {/* Codeup Solutions */}
+              <NavLink
+                to="/codeup"
+                className={({ isActive }) =>
+                  isActive
+                    ? "backdrop-blur-lg bg-gradient-to-l from-black to-slate-600 rounded-full p-2 transition-all duration-300 w-12 h-12"
+                    : "opacity-50 p-2 bg-gray-600 text-white hover:bg-black rounded-full transition-all duration-300 hover:opacity-100 w-12 h-12"
+                }
+              >
+            <img
+                  src={codeuplogo}
+                  alt="Codeup"
+                  className="w-[28px] h-[28px] object-contain rounded-full"
+                />
+             
+              </NavLink>
+      
               {/* codeup.solutions button */}
-              <a
+              {/* <a
                 href="https://www.codeup.solutions"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -228,7 +245,7 @@ export default function Navbar() {
                   alt="Codeup"
                   className="w-[28px] h-[28px] object-contain rounded-full"
                 />
-              </a>
+              </a> */}
 
               {/* Dark Light Mode */}
               {/* Theme Toggle Button */}

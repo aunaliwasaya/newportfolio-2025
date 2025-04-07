@@ -4,6 +4,7 @@ import About from "../pages/About";
 import Projects from "../pages/Projects";
 import Products from "../pages/Products";
 import PageNotFound from "../pages/PageNotFound";
+import CodeupSolutions from "../pages/CodeupSolutions";
 
 
 
@@ -18,6 +19,7 @@ export default function SiteRoutes() {
 
 {/* <Route path="/projects" element={<Projects />} /> */}
 <Route path="/Certificates" element={<Products />} />
+<Route path="/codeup" element={<CodeupSolutions />} />
 <Route path="*" element={<PageNotFound />} />
 </Routes>
 
