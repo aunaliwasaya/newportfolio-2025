@@ -96,7 +96,7 @@ export default function CodeupSolutions() {
   };
 
   return (
-    <div  id="top" className={`w-[80%] mx-auto rounded-xl mb-5 ${isDarkMode ? "bg-gradient-to-r from-black to-gray-950 text-white " : "bg-white  text-black  "}`}>
+    <div  id="top" className={`w-[100%] mx-auto rounded-xl mb-5 ${isDarkMode ? "bg-gradient-to-r from-black to-gray-950 text-white " : "bg-white  text-black  "}`}>
       <div className="px-7 pt-1">
         <h1 className="flex items-center gap-x-2 text-lg font-medium">
           <div className="w-4 h-2 bg-gray-400 rounded-full"></div>
@@ -150,7 +150,7 @@ export default function CodeupSolutions() {
         <div className="flex flex-col gap-y-4">
           <div className="flex justify-center items-center gap-2 flex-wrap">
             {/* content */}
-            <div className="w-full md:w-[80%] ml-0 sm:ml-10">
+            <div className="w-full md:w-[100%] ml-0 sm:ml-10">
               <h1 className="text-xl md:text-4xl font-semibold text-center md:text-justify tracking-tighter lg:mt-5">
               <p
   className={`text-transparent text-xl bg-clip-text font-bold text-[40px] ${
