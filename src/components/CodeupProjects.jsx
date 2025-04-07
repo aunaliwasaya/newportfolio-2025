@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { FaMobileAlt, FaMobile } from "react-icons/fa";
-import project1 from "../../src/assets/project-one.webp";
-import project2 from "../../src/assets/project-two.webp";
-import project3 from "../../src/assets/project-three.webp";
-import project4 from "../../src/assets/project-four.webp";
+import project1 from "../../src/assets/cell.webp";
+import project2 from "../../src/assets/pakdream.webp";
+import project3 from "../../src/assets/bux.webp";
+import project4 from "../../src/assets/ikram.webp";
 import { useSelector, useDispatch } from "react-redux";
 import digi247 from "../../src/assets/247.webp";
 import adfnco from "../../src/assets/adfnco.webp";
