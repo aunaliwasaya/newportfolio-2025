@@ -59,7 +59,7 @@ function BottomNav() {
           className={({ isActive }) =>
             isActive
               ? "backdrop-blur-lg bg-gradient-to-l from-black to-slate-600 rounded-full p-2 transition-all duration-300  flex justify-center items-center"
-              : "opacity-50 p-2 bg-gray-600 text-white hover:bg-black rounded-full transition-all duration-300 hover:opacity-100  flex justify-center items-center"
+              : "opacity-95 p-2 bg-gray-600 text-white hover:bg-black rounded-full transition-all duration-300 hover:opacity-100  flex justify-center items-center"
           }
         >
             <img src={codeuplogo} alt="Codeup Logo" className="w-16 h-16 -mt-10" />
