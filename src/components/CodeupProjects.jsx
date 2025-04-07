@@ -63,8 +63,8 @@ const isDarkMode = useSelector((state) => state.theme.isDarkMode);
       <div className="flex justify-end gap-4 mb-4 md:hidden sticky top-[15%] z-50">
         <div
           onClick={() => setIsSingleColumn(false)}
-          className={`cursor-pointer p-2 rounded-lg flex ${
-            !isSingleColumn ? "bg-blue-600 text-white" : "bg-gray-200 text-gray-800"
+          className={`cursor-pointer p-2 rounded-lg flex shadow-lg shadow-gray-700 ${
+            !isSingleColumn ? "bg-gradient-to-l from-blue-600 to-gray-500 text-white" : "bg-gray-200 text-gray-800"
           }`}
         >
           <FaMobileAlt size={24} />
@@ -73,8 +73,8 @@ const isDarkMode = useSelector((state) => state.theme.isDarkMode);
 
         <div
           onClick={() => setIsSingleColumn(true)}
-          className={`cursor-pointer p-2 rounded-lg ${
-            isSingleColumn ? "bg-blue-600 text-white" : "bg-gray-200 text-gray-800"
+          className={`cursor-pointer p-2 rounded-lg shadow-lg shadow-gray-700  ${
+            isSingleColumn ? "bg-gradient-to-r from-blue-600 to-gray-500 text-white" : "bg-gray-200 text-gray-800"
           }`}
         >
           <FaMobile size={24} />
