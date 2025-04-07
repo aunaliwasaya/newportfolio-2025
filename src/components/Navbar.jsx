@@ -431,7 +431,7 @@ export default function Navbar() {
                     </NavLink>
                   </div>
                   {/* codeup.solutions button mobile menu */}
-           
+{/*            
                   <div
                     onClick={toggleMenu}
                     className="flex justify-start items-center gap-3 font-semibold"
@@ -454,7 +454,33 @@ export default function Navbar() {
                     >
                       <p className="text-gray-900">    CodeUp.Solutions</p>
                     </a>
-                  </div>
+                  </div> */}
+
+                    {/* Codeup Solutions */}
+                    <div   onClick={toggleMenu}  className="flex justify-start items-center gap-3 font-semibold">
+                    <NavLink
+                to="/codeup"
+                className={({ isActive }) =>
+                  isActive
+                    ? "backdrop-blur-lg bg-gradient-to-l from-black to-slate-600 rounded-full p-2 transition-all duration-300 w-12 h-12"
+                    : "opacity-50 p-2 bg-gray-600 text-white hover:bg-black rounded-full transition-all duration-300 hover:opacity-100 w-12 h-12"
+                }
+              >
+            <img
+                  src={codeuplogo}
+                  alt="Codeup"
+                  className="w-[28px] h-[28px] object-contain rounded-full"
+                />
+        
+              </NavLink>
+              <NavLink
+                      to="/codeup"
+                      className="flex justify-center items-center"
+                    >
+                      <p> CodeUp Projects</p>
+                    </NavLink>
+                    </div>
+        
 
                   {/* Dark/Light Mode Toggle */}
                   <div className="flex justify-start items-center gap-3 font-semibold">
