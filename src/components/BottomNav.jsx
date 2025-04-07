@@ -53,16 +53,24 @@ function BottomNav() {
 
         {/* Logo in the center */}
         <div className="flex flex-col items-center">
-          <a href="https://codeup.solutions/" target="_blank" rel="noopener noreferrer">
+       
+          <NavLink
+          to="/codeup"
+          className={({ isActive }) =>
+            isActive
+              ? "backdrop-blur-lg bg-gradient-to-l from-black to-slate-600 rounded-full p-2 transition-all duration-300  flex justify-center items-center"
+              : "opacity-50 p-2 bg-gray-600 text-white hover:bg-black rounded-full transition-all duration-300 hover:opacity-100  flex justify-center items-center"
+          }
+        >
             <img src={codeuplogo} alt="Codeup Logo" className="w-16 h-16 -mt-10" />
-          </a>
-          <a href="https://codeup.solutions/" target="_blank" rel="noopener noreferrer">
+        </NavLink>
+       
           <p className="ml-1 font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-800">Codeup.
           <span className="ml-1 font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-800 to-blue-400">
   Solutions
 </span>
           </p>
-          </a>
+       
         </div>
 
         {/* Theme Toggle and Home Navigation */}
