@@ -60,7 +60,7 @@ const isDarkMode = useSelector((state) => state.theme.isDarkMode);
   return (
     <div className="p-4">
       {/* Icons - visible only on mobile */}
-      <div className="flex justify-end gap-4 mb-4 md:hidden sticky top-[15%] z-50">
+      <div className="flex justify-end gap-4 mb-4 md:hidden sticky top-[7%] z-50">
         <div
           onClick={() => setIsSingleColumn(false)}
           className={`cursor-pointer p-2 rounded-lg flex shadow-lg shadow-gray-700 ${
