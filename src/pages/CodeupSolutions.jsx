@@ -153,6 +153,7 @@ export default function CodeupSolutions() {
           </div>
         </div>
       </div>
+      {/* codeup logo */}
       <div className="mx-auto w-[100px] h-[100px] border border-gray shadow-md rounded-full flex justify-center items-center">
       <a href="https://www.codeup.solutions" target="_blank" rel="noopener noreferrer">
   <img

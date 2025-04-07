@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import profile from "../assets/about-1.png";
 import darkmodeprofile from "../assets/darkmode-profile.jpg";
+import darkmodeprofile1 from "../assets/codeup-favicon.png";
+import profileone from "../assets/codeup-favicon.png"
 import CopyEmailButton from "./CopyEmailButton";
 import { getConfigData } from "../data/configReader";
 import herosection from "../assets/herosection.png";
@@ -13,6 +15,7 @@ import VerticalLogoSlider2 from "./VerticalLogoSlider2";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import PortfolioModal from "../pages/PortfolioModal";
+import CodeupProjects from "./CodeupProjects";
 
 
 export default function Profile() {
@@ -560,6 +563,34 @@ export default function Profile() {
         </div>
         <VerticalLogoSlider2 />
       </div>
+
+            {/* codeup logo */}
+            <div className="mx-auto w-[100px] h-[100px] border border-gray shadow-md rounded-full flex justify-center items-center">
+      <a href="https://www.codeup.solutions" target="_blank" rel="noopener noreferrer">
+  <img
+    src={isDarkMode ? darkmodeprofile1 : profileone}
+    alt="Profile"
+    className="w-20 h-20 md:w-20 md:h-20 transform scale-x-[-1]"
+  />
+</a>
+
+      </div>
+    
+        
+   {/* What We offer */}
+   <div
+        className={`${
+          isDarkMode ? 
+            "bg-gradient-to-l from-slate-600 hover:to-from-black text-white shadow-white shadow-sm" : "bg-black text-white shadow-sm shadow-white"
+        } drop-shadow-md card rounded-lg mt-10 text-lg text-center font-bold m-3 w-[250px] truncate xl:w-[250px] py-3 px-2 mx-auto`}
+      >
+      25+ Projects Completed 
+      </div>
+
+      {/* Projects Div  */}
+
+  
+<CodeupProjects/>
     </>
   );
 }
