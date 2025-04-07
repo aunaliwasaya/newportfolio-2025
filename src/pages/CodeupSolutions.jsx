@@ -4,7 +4,7 @@ import profileone from "../../src/assets/codeup-favicon.png";
 import darkmodeprofile from "../../src/assets/codeup-favicon.png";
 // import CopyEmailButton from "../components/CopyEmailButton";
 import { getConfigData } from "../data/configReader";
-import cover from "../../src/assets/cover2.png";
+import cover from "../../src/assets/codeup-cover.webp";
 // import TaxationCertificate from "../components/TaxationCertificate";
 // import WhatIOffer from "../components/WhatIOffer";
 import { useSelector } from "react-redux"; // Import useSelector from Redux
