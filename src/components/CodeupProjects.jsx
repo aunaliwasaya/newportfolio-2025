@@ -4,13 +4,24 @@ import project1 from "../../src/assets/project-one.webp";
 import project2 from "../../src/assets/project-two.webp";
 import project3 from "../../src/assets/project-three.webp";
 import project4 from "../../src/assets/project-four.webp";
-// Add more sample projects as needed
-import project5 from "../../src/assets/project-one.webp";
-import project6 from "../../src/assets/project-two.webp";
-import project7 from "../../src/assets/project-three.webp";
-import project8 from "../../src/assets/project-four.webp";
 import { useSelector, useDispatch } from "react-redux";
-
+import digi247 from "../../src/assets/247.webp";
+import adfnco from "../../src/assets/adfnco.webp";
+import alibhai from "../../src/assets/alibhai.webp";
+import arshi from "../../src/assets/arshi.webp";
+import construct from "../../src/assets/construct.webp";
+import dollar from "../../src/assets/dollar.webp";
+import drfiora from "../../src/assets/drfiora.webp";
+import geomobile from "../../src/assets/geomobile.webp";
+import hareem from "../../src/assets/hareem.webp";
+import hydra2 from "../../src/assets/hydra2.webp";
+import hydraauto from "../../src/assets/hydraauto.webp";
+import joharimmi from "../../src/assets/joharimmi.webp";
+import kingtoys from "../../src/assets/kingtoys.webp";
+import nightblush from "../../src/assets/nightblush.webp";
+import nitrotech from "../../src/assets/nitrotech.webp";
+import oneclick from "../../src/assets/oneclick.webp";
+import reesha from "../../src/assets/reesha.webp";
 
 const CodeupProjects = () => {
 
@@ -20,15 +31,29 @@ const isDarkMode = useSelector((state) => state.theme.isDarkMode);
   const [showAll, setShowAll] = useState(false);
 
   const projects = [
-    { image: project1, link: "https://codeup.solutions" },
-    { image: project2, link: "https://codeup.solutions" },
-    { image: project3, link: "https://codeup.solutions" },
-    { image: project4, link: "https://codeup.solutions" },
-    { image: project5, link: "https://codeup.solutions" },
-    { image: project6, link: "https://codeup.solutions" },
-    { image: project7, link: "https://codeup.solutions" },
-    { image: project8, link: "https://codeup.solutions" },
+    { image: project1, link: "https://celleducation.online/" },
+    { image: project2, link: "https://pakdreamhome.site" },
+    { image: project3, link: "https://buxsongroup.com/" },
+    { image: project4, link: "https://ikramelectronics.com/" },
+    { image: digi247, link: "https://247marketingservices.com/" },
+    { image: adfnco, link: "https://adfandco.org" },
+    { image: alibhai, link: "https://alibhaitraders.com/" },
+    { image: arshi, link: "https://arshijewel.com" },
+    { image: construct, link: "https://constructestimating.us" },
+    { image: dollar, link: "https://dollarearningpro.com" },
+    { image: drfiora, link: "https://drfiora.com" },
+    { image: geomobile, link: "https://Geomobiles.pk" },
+    { image: hareem, link: "https://haremleathercollection.com" },
+    { image: hydra2, link: "https://techyardgrowthsolutions.com" },
+    { image: hydraauto, link: "https://techyardautomation.com" },
+    { image: joharimmi, link: "https://Aljuharimmigration.com" },
+    { image: kingtoys, link: "https://kingtoys.store" },
+    { image: nightblush, link: "https://nightblush.com" },
+    { image: nitrotech, link: "https://nitrotechmachines.com" },
+    { image: oneclick, link: "https://Oneclickprinters.com" },
+    { image: reesha, link: "https://reeshapk.com" },
   ];
+  
 
   const visibleProjects = showAll ? projects : projects.slice(0, 6);
 
