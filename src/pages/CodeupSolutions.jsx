@@ -8,33 +8,13 @@ import cover from "../../src/assets/cover2.png";
 // import TaxationCertificate from "../components/TaxationCertificate";
 // import WhatIOffer from "../components/WhatIOffer";
 import { useSelector } from "react-redux"; // Import useSelector from Redux
-import project1 from "../../src/assets/project-one.png"
-import project2 from "../../src/assets/project-two.png"
-import project3 from "../../src/assets/project-three.png"
-import project4 from "../../src/assets/project-four.png"
+import CodeupProjects from "../components/CodeupProjects";
 
 
 export default function CodeupSolutions() {
 
+   
 
-    const projects = [
-        {
-          image: project1,
-          link: "https://codeup.solutions", 
-        },
-        {
-          image: project2,
-          link: "https://codeup.solutions",
-        },
-        {
-          image: project3,
-          link: "https://codeup.solutions",
-        },
-        {
-          image: project4,
-          link: "https://codeup.solutions",
-        },
-      ];
   
   const skills = [
     "React",
@@ -197,17 +177,9 @@ export default function CodeupSolutions() {
 
       {/* Projects Div  */}
 
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4 p-4">
-      {projects.map((project, index) => (
-        <a key={index} href={project.link} target="_blank" rel="noopener noreferrer">
-          <img
-            src={project.image}
-            alt={`Project ${index + 1}`}
-            className="w-full h-auto rounded-lg shadow-md"
-          />
-        </a>
-      ))}
-    </div>
+  
+
+<CodeupProjects/>
   
 
 
