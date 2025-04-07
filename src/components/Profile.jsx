@@ -566,6 +566,7 @@ export default function Profile() {
 
             {/* codeup logo */}
             <div className="mt-5 mx-auto w-[100px] h-[100px] border border-gray shadow-md rounded-full flex justify-center items-center">
+
       <a href="https://www.codeup.solutions" target="_blank" rel="noopener noreferrer">
   <img
     src={isDarkMode ? darkmodeprofile1 : profileone}
@@ -575,6 +576,18 @@ export default function Profile() {
 </a>
 
       </div>
+      <div className="flex justify-center items-center">
+      <p
+  className={`text-transparent text-xl bg-clip-text font-bold text-[40px] ${
+    isDarkMode
+      ? 'bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600'
+      : 'bg-gradient-to-l from-blue-400 via-blue-500 to-blue-600'
+  }`}
+>
+  {"Codeup.Solutions"}
+</p>
+      </div>
+
     
         
    {/* What We offer */}
@@ -582,7 +595,7 @@ export default function Profile() {
         className={`${
           isDarkMode ? 
             "bg-gradient-to-l from-slate-600 hover:to-from-black text-white shadow-white shadow-sm" : "bg-black text-white shadow-sm shadow-white"
-        } drop-shadow-md card rounded-lg mt-10 text-lg text-center font-bold m-3 w-[250px] truncate xl:w-[250px] py-3 px-2 mx-auto`}
+        } drop-shadow-md card rounded-lg mt-5 text-lg text-center font-bold m-3 w-[250px] truncate xl:w-[250px] py-3 px-2 mx-auto`}
       >
       25+ Projects Completed 
       </div>
