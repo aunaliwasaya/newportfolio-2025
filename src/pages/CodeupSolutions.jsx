@@ -8,10 +8,10 @@ import cover from "../../src/assets/cover2.png";
 // import TaxationCertificate from "../components/TaxationCertificate";
 // import WhatIOffer from "../components/WhatIOffer";
 import { useSelector } from "react-redux"; // Import useSelector from Redux
-import project1 from "../../src/assets/design9.webp"
-import project2 from "../../src/assets/codeup-favicon.png"
-import project3 from "../../src/assets/codeup-favicon.png"
-import project4 from "../../src/assets/codeup-favicon.png"
+import project1 from "../../src/assets/project-one.png"
+import project2 from "../../src/assets/project-two.png"
+import project3 from "../../src/assets/project-three.png"
+import project4 from "../../src/assets/project-four.png"
 
 
 export default function CodeupSolutions() {
@@ -197,7 +197,7 @@ export default function CodeupSolutions() {
 
       {/* Projects Div  */}
 
-      {/* <div className="grid grid-cols-2 md:grid-cols-3 gap-4 p-4">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-4 p-4">
       {projects.map((project, index) => (
         <a key={index} href={project.link} target="_blank" rel="noopener noreferrer">
           <img
@@ -207,7 +207,7 @@ export default function CodeupSolutions() {
           />
         </a>
       ))}
-    </div> */}
+    </div>
   
 
 
