@@ -565,7 +565,7 @@ export default function Profile() {
       </div>
 
             {/* codeup logo */}
-            <div className="mx-auto w-[100px] h-[100px] border border-gray shadow-md rounded-full flex justify-center items-center">
+            <div className="mt-5 mx-auto w-[100px] h-[100px] border border-gray shadow-md rounded-full flex justify-center items-center">
       <a href="https://www.codeup.solutions" target="_blank" rel="noopener noreferrer">
   <img
     src={isDarkMode ? darkmodeprofile1 : profileone}
