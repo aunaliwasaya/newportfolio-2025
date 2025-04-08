@@ -22,6 +22,8 @@ import nightblush from "../../src/assets/nightblush.webp";
 import nitrotech from "../../src/assets/nitrotech.webp";
 import oneclick from "../../src/assets/oneclick.webp";
 import reesha from "../../src/assets/reesha.webp";
+import tabib from "../../src/assets/tabib.webp";
+import kamran from "../../src/assets/kamran.webp";
 
 const CodeupProjects = () => {
 
@@ -52,6 +54,8 @@ const isDarkMode = useSelector((state) => state.theme.isDarkMode);
     { image: nitrotech, link: "https://nitrotechmachines.com" },
     { image: oneclick, link: "https://Oneclickprinters.com" },
     { image: reesha, link: "https://reeshapk.com" },
+    { image: kamran, link: "https://kamranmalikevents.com/" },
+    { image: tabib, link: "https://afringroupoftabib.com/" },
   ];
   
 
