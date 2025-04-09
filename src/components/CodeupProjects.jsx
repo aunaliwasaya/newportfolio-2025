@@ -357,6 +357,9 @@ const CodeupProjects = () => {
       )}
 
       {/* Buttons */}
+      {startIndex >= projects.length && (
+        <div className="text-center mt-4 text-gray-500">End of Content</div>
+      )}
       <div className="flex justify-center items-center mt-6 gap-3" ref={viewMoreRef}>
         {startIndex < projects.length && (
           <div>
@@ -368,8 +371,8 @@ const CodeupProjects = () => {
                 className={`px-6 py-2 rounded-md text-white transition duration-300 
                   bg-gradient-to-l ${
                     isDarkMode
-                      ? "from-blue-500 via-purple-500 to-indigo-500"
-                      : "from-pink-500 to-red-500"
+                      ? "from-blue-500 via-purple-500 to-indigo-500 hover:to-purple-300"
+                      : "from-pink-500 to-red-500 hover:to-pink-300"
                   }`}
               >
                 View More
@@ -379,25 +382,24 @@ const CodeupProjects = () => {
         )}
 
         {startIndex > 6 && (
-          <div>
-            <button
-              onClick={handleViewLess}
-              className={`px-6 py-2 rounded-md text-white transition duration-300 
-                bg-gradient-to-l ${
-                  isDarkMode
-                    ? "from-blue-500 via-purple-500 to-indigo-500"
-                    : "from-pink-500 to-red-500"
-                }`}
-            >
-              View Less
-            </button>
-          </div>
+ <div>
+ <button
+   onClick={handleViewLess}
+   className={`px-6 py-2 rounded-md text-white transition duration-300 
+     bg-gradient-to-r 
+     ${isDarkMode 
+       ? "from-red-800 to-red-500 hover:from-red-600 hover:to-red-300"
+       : "from-red-900 to-red-500 hover:from-red-700 hover:to-red-300"
+     }`}
+ >
+   View Less
+ </button>
+</div>
+
         )}
       </div>
 
-      {startIndex >= projects.length && (
-        <div className="text-center mt-4 text-gray-500">End of Content</div>
-      )}
+
     </div>
   );
 };
