@@ -85,9 +85,10 @@ export default function Projects() {
         <ImageSearchApp />
 
               </div>
+      <br></br>
       
               <h2
-                className={`drop-shadow-md card rounded-lg mt-5 mb-8 text-lg text-center font-bold m-3 w-[300px] md:w-[350px] py-3 mx-auto ${
+                className={`drop-shadow-md card rounded-lg lg:mt-16 mb-8 text-lg text-center font-bold m-3 w-[300px] md:w-[350px] py-3 mx-auto ${
                   isDarkMode
                     ?  "bg-gradient-to-l from-slate-600 hover:to-from-black text-white shadow-white shadow-sm"
                     : "bg-black text-white  shadow-lg"
