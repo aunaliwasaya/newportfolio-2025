@@ -110,7 +110,7 @@ function App() {
     {/* Profile Image */}
     <div className="z-10 -mt-20 sm:mt-16 w-36 h-36 rounded-full bg-gradient-to-b from-gray-100 to-gray-300 overflow-hidden border-4 border-transparent flex items-center justify-center relative">
       {/* Gradient Border Animation */}
-      <div className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 animate-spin-slow"></div>
+      <div className="absolute inset-0 rounded-full bg-gray-400 animate-spin-slow"></div>
 
       {/* Inner Circle with Image */}
       <div className="w-full h-full bg-gray-100 rounded-full flex items-center justify-center overflow-hidden">
@@ -124,7 +124,7 @@ function App() {
 
     {/* Animated Skills */}
     <p
-      className="text-lg -mt-5 font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 animate-fade-in-out"
+      className="text-lg -mt-5 font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-blue-600 to-blue-300 animate-fade-in-out"
       key={currentSkill}
     >
       {skills[currentSkill]}

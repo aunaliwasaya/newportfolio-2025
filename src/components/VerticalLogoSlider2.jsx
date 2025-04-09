@@ -76,7 +76,7 @@ const VerticalLogoSlider = () => {
       className={`absolute inset-0 drop-shadow-md card rounded-3xl m-3 z-10 pointer-events-none -rotate-3 ${
         isDarkMode
           ? "bg-gradient-to-r from-blue-400 via-blue-600 to-purple-600"
-          : "bg-gradient-to-r from-purple-400 via-pink-500 to-red-500"
+          : "bg-gradient-to-l from-gray-700 via-blue-500 to-slate-400"
       }`}
     ></div>
 
@@ -139,7 +139,7 @@ const VerticalLogoSlider = () => {
                 <img
                   src={logo}
                   alt={`Logo ${index + 1}`}
-                        className="shadow-md shadow-pink-600 h-20 w-48 rounded-xl brightness-125 saturate-150  bg-gradient-to-l from-slate-300 to-gray-600  p-2"
+                        className="shadow-md shadow-white h-20 w-48 rounded-xl brightness-125 saturate-150  bg-gradient-to-l from-slate-300 to-gray-600  p-2"
                 />
               </div>
             ))}
@@ -183,7 +183,7 @@ const VerticalLogoSlider = () => {
     className={`inline-block animate-marquee ${
       isDarkMode
         ? "bg-gradient-to-r from-blue-400 via-blue-600 to-purple-600 text-transparent bg-clip-text"
-        : "bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-transparent bg-clip-text"
+        : "bg-gradient-to-r from-blue-400 via-black to-blue-500 text-transparent bg-clip-text"
     }`}
     style={{
       animationDuration: "16s",

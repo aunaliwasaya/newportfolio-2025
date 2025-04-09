@@ -44,7 +44,7 @@ const PortfolioModal = () => {
           className={` px-2 py-2 sm:px-2 sm:py-2 text-xs sm:text-sm cursor-pointer rounded-lg shadow-md hover:bg-blue-700 ${
             isDarkMode
               ? "bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 border-blue-500 focus:ring-blue-200"
-              : "bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 border-gray-200 hover:border-gray-300 focus:ring-gray-100"
+              : "bg-gradient-to-l from-gray-700 via-blue-500 to-slate-400 hover:border-gray-300 focus:ring-gray-100"
           }`}
         >
           Need a Portfolio??
@@ -54,7 +54,7 @@ const PortfolioModal = () => {
           className={`px-2 py-2 sm:px-2 sm:py-2 text-xs sm:text-sm cursor-pointer rounded-lg shadow-md hover:bg-blue-700 ${
             isDarkMode
               ? "bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 border-blue-500 focus:ring-blue-200"
-              : "bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 border-gray-200 hover:border-gray-300 focus:ring-gray-100"
+              : "bg-gradient-to-l from-gray-700 via-blue-500 to-slate-400 hover:border-gray-300 focus:ring-gray-100"
           }`}
         >
           Need a Website??
@@ -67,7 +67,7 @@ const PortfolioModal = () => {
           className={`px-2 py-2 sm:px-2 sm:py-2 text-xs sm:text-sm cursor-pointer rounded-lg shadow-md hover:bg-blue-700 ${
             isDarkMode
               ? "bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 border-blue-500 focus:ring-blue-200"
-              : "bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 border-gray-200 hover:border-gray-300 focus:ring-gray-100"
+              : "bg-gradient-to-l from-gray-700 via-blue-500 to-slate-400 hover:border-gray-300 focus:ring-gray-100"
           }`}
         >
           Need a Design??
@@ -77,7 +77,7 @@ const PortfolioModal = () => {
           className={`px-2 py-2 sm:px-2 sm:py-2 text-xs sm:text-sm cursor-pointer rounded-lg shadow-md hover:bg-blue-700 ${
             isDarkMode
               ? "bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 border-blue-500 focus:ring-blue-200"
-              : "bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 border-gray-200 hover:border-gray-300 focus:ring-gray-100"
+              : "bg-gradient-to-l from-gray-700 via-blue-500 to-slate-400 hover:border-gray-300 focus:ring-gray-100"
           }`}
         >
           Need a Pro CV ?

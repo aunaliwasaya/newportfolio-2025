@@ -71,7 +71,7 @@ const VerticalLogoSlider = () => {
 
         {/* First Slider */}
         <div
-          className="relative shadow-lg shadow-purple-600 rounded-xl py-2 w-[48%] sm:w-[32%] lg:w-[22%] mx-auto h-[300px] px-1 mt-2 mb-5 bg-gradient-to-b from-white to-gray-200 overflow-hidden transform"
+          className="relative shadow-lg shadow-gray-500 rounded-xl py-2 w-[48%] sm:w-[32%] lg:w-[22%] mx-auto h-[300px] px-1 mt-2 mb-5 bg-gradient-to-b from-white to-gray-200 overflow-hidden transform"
           style={{ transform: "rotate(5deg)" }}
         >
           <Slider {...settings}>
@@ -80,7 +80,7 @@ const VerticalLogoSlider = () => {
                 <img
                   src={logo}
                   alt={`Logo ${index + 1}`}
-                 className="shadow-md shadow-blue-500 h-20 w-48 rounded-xl brightness-125 saturate-150 bg-gradient-to-l from-slate-400 to-slate-600 p-2"
+                 className="shadow-md shadow-black h-20 w-48 rounded-xl brightness-125 saturate-150 bg-gradient-to-l from-slate-400 to-slate-600 p-2"
                 />
               </div>
             ))}
@@ -89,7 +89,7 @@ const VerticalLogoSlider = () => {
 
         {/* Middle Slider (Reverse Direction) */}
         <div
-          className="relative shadow-lg shadow-pink-600 rounded-xl py-2 w-[48%] sm:w-[32%] mx-auto lg:w-[22%] h-[300px] mt-2 mb-5 bg-gradient-to-b from-black to-gray-100 overflow-hidden transform"
+          className="relative shadow-lg shadow-white rounded-xl py-2 w-[48%] sm:w-[32%] mx-auto lg:w-[22%] h-[300px] mt-2 mb-5 bg-gradient-to-b from-black to-gray-100 overflow-hidden transform"
           style={{ transform: "rotate(5deg)" }}
         >
           <Slider
@@ -103,7 +103,7 @@ const VerticalLogoSlider = () => {
                 <img
                   src={logo}
                   alt={`Logo ${index + 1}`}
-                   className="shadow-md shadow-pink-600 h-20 w-48 rounded-xl brightness-125 saturate-150 bg-gradient-to-l from-slate-400 to-slate-600 p-2"
+                   className="shadow-md shadow-black h-20 w-48 rounded-xl brightness-125 saturate-150 bg-gradient-to-l from-slate-400 to-slate-600 p-2"
                 />
               </div>
             ))}
@@ -112,7 +112,7 @@ const VerticalLogoSlider = () => {
 
         {/* Third Slider */}
         <div
-          className="hidden shadow-lg shadow-blue-600  md:block relative rounded-xl py-2 w-[48%] sm:w-[32%] lg:w-[22%] mx-auto h-[300px] mt-2 mb-5 bg-gradient-to-b from-white to-gray-200 overflow-hidden transform"
+          className="hidden shadow-lg shadow-gray-300  md:block relative rounded-xl py-2 w-[48%] sm:w-[32%] lg:w-[22%] mx-auto h-[300px] mt-2 mb-5 bg-gradient-to-b from-white to-gray-200 overflow-hidden transform"
           style={{ transform: "rotate(5deg)" }}
         >
           <Slider {...settings}>
@@ -121,7 +121,7 @@ const VerticalLogoSlider = () => {
                 <img
                   src={logo}
                   alt={`Logo ${index + 1}`}
-             className="shadow-md shadow-blue-500 h-20 w-48 rounded-xl brightness-125 saturate-150 bg-gradient-to-l from-slate-400 to-slate-600 p-2"
+             className="shadow-md shadow-black h-20 w-48 rounded-xl brightness-125 saturate-150 bg-gradient-to-l from-slate-400 to-slate-600 p-2"
                 />
               </div>
             ))}

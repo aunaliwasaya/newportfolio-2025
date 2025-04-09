@@ -147,7 +147,7 @@ export default function Profile() {
                 className={`w-32 h-32 -top-11 rounded-full flex items-center justify-center overflow-hidden animate-spin-slow ${
                   isDarkMode
                     ? "bg-gradient-to-r from-blue-400 via-blue-600 to-purple-600"
-                    : "bg-gradient-to-r from-purple-400 via-pink-500 to-red-500"
+                    : "bg-gradient-to-r from-gray-700 via-white to-blue-500"
                 }`}
               >
                 <img
@@ -177,7 +177,7 @@ export default function Profile() {
             <div className="mx-auto flex flex-col ">
               <div className="w-[93%] mx-auto">
                 <h1
-                  className={`text-2xl text-center md:text-2xl font-semibold w-full tracking-tighter bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 -mt-4 ${
+                  className={`text-2xl text-center md:text-2xl font-semibold w-full tracking-tighter bg-clip-text bg-gradient-to-r from-black via-gray-900 to-white -mt-4 ${
                     isDarkMode ? "text-blue-500" : "text-transparent"
                   }`}
                 >
@@ -200,7 +200,7 @@ export default function Profile() {
    className={`px-4 py-2 text-sm cursor-pointer mt-5 text-white rounded-lg shadow-md hover:bg-blue-700 transition animate-bounce ${
      isDarkMode
        ? "bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 border-blue-500 focus:ring-blue-200"
-       : "bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 border-gray-200 hover:border-gray-300 focus:ring-gray-100"
+       : "bg-gradient-to-r from-gray-700 via-blue-500 to-slate-400 border-gray-200 hover:border-gray-300 focus:ring-gray-100"
    }`}
  >
    Featured Services
@@ -218,7 +218,7 @@ export default function Profile() {
           </div>
           <button
             onClick={() => setShowServices(false)}
-            className="bg-red-500 absolute top-0 -right-3 text-white  w-8 h-8 p-3 shadow-md shadow-red-500 rounded-full flex justify-start items-center hover:bg-red-600 transition"
+            className="bg-gradient-to-r from-gray-700 via-blue-500 to-slate-400 border-gray-200 absolute top-0 -right-3 text-white  w-8 h-8 p-3 shadow-md shadow-gray-500 rounded-full flex justify-start items-center hover:bg-red-600 transition"
           >
             x
           </button>

@@ -108,7 +108,7 @@ const ImageSliderComponent = () => {
     className={`bg-clip-text text-transparent ${
       isDarkMode
         ? "bg-gradient-to-r from-blue-500 to-white"
-        : "bg-gradient-to-r from-pink-500 to-red-500"
+        : "bg-gradient-to-r from-black to-white"
     }`}
   >
     {images[currentIndex].title}
