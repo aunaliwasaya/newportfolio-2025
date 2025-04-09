@@ -1,6 +1,8 @@
 import React, { useState, useRef } from "react";
 import { FaMobileAlt, FaMobile } from "react-icons/fa";
 import { useSelector } from "react-redux";
+
+// Images
 import project1 from "../../src/assets/cell.webp";
 import project2 from "../../src/assets/pakdream.webp";
 import project3 from "../../src/assets/bux.webp";
@@ -29,8 +31,8 @@ const CodeupProjects = () => {
   const isDarkMode = useSelector((state) => state.theme.isDarkMode);
   const [isSingleColumn, setIsSingleColumn] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [startIndex, setStartIndex] = useState(6); // Start at index 6 for the next batch
-  const viewMoreRef = useRef(null); // ref for anchoring
+  const [startIndex, setStartIndex] = useState(6);
+  const viewMoreRef = useRef(null);
 
   const projects = [
     { image: project1, link: "https://celleducation.online/" },
@@ -44,15 +46,15 @@ const CodeupProjects = () => {
     { image: construct, link: "https://constructestimating.us" },
     { image: dollar, link: "https://dollarearningpro.com" },
     { image: drfiora, link: "https://drfiora.com" },
-    { image: geomobile, link: "https://Geomobiles.pk" },
+    { image: geomobile, link: "https://geomobiles.pk" },
     { image: hareem, link: "https://haremleathercollection.com" },
     { image: hydra2, link: "https://techyardgrowthsolutions.com" },
     { image: hydraauto, link: "https://techyardautomation.com" },
-    { image: joharimmi, link: "https://Aljuharimmigration.com" },
+    { image: joharimmi, link: "https://aljuharimmigration.com" },
     { image: kingtoys, link: "https://kingtoys.store" },
     { image: nightblush, link: "https://nightblush.com" },
     { image: nitrotech, link: "https://nitrotechmachines.com" },
-    { image: oneclick, link: "https://Oneclickprinters.com" },
+    { image: oneclick, link: "https://oneclickprinters.com" },
     { image: reesha, link: "https://reeshapk.com" },
     { image: kamran, link: "https://kamranmalikevents.com/" },
     { image: tabib, link: "https://afringroupoftabib.com/" },
@@ -63,7 +65,7 @@ const CodeupProjects = () => {
   const handleViewMore = () => {
     setLoading(true);
     setTimeout(() => {
-      setStartIndex(startIndex + 6);
+      setStartIndex((prev) => Math.min(prev + 6, projects.length));
       setLoading(false);
     }, 1000);
   };
@@ -72,12 +74,12 @@ const CodeupProjects = () => {
     setStartIndex((prev) => Math.max(6, prev - 6));
     setTimeout(() => {
       viewMoreRef.current?.scrollIntoView({ behavior: "smooth" });
-    }, 100); // Delay for smoother effect
+    }, 100);
   };
 
   return (
     <div className="p-4">
-      {/* Toggle Icons - mobile only */}
+      {/* View toggle icons for mobile */}
       <div className="flex justify-end gap-4 mb-4 md:hidden">
         <div
           onClick={() => setIsSingleColumn(false)}
@@ -90,7 +92,6 @@ const CodeupProjects = () => {
           <FaMobileAlt size={24} />
           <FaMobileAlt size={24} />
         </div>
-
         <div
           onClick={() => setIsSingleColumn(true)}
           className={`cursor-pointer p-2 rounded-lg shadow-lg shadow-gray-700 ${
@@ -103,7 +104,7 @@ const CodeupProjects = () => {
         </div>
       </div>
 
-      {/* Mobile: 1-column view */}
+      {/* Mobile Single Column */}
       {isSingleColumn && (
         <div className="grid grid-cols-1 gap-4 md:hidden">
           {visibleProjects.map((project, index) => (
@@ -123,7 +124,7 @@ const CodeupProjects = () => {
         </div>
       )}
 
-      {/* Multi-column for desktop/tablet */}
+      {/* Desktop/Tablet Multi Column */}
       {!isSingleColumn && (
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           {visibleProjects.map((project, index) => (
@@ -143,7 +144,7 @@ const CodeupProjects = () => {
         </div>
       )}
 
-      {/* View More / Less Buttons */}
+      {/* Buttons */}
       <div className="flex justify-center items-center mt-6 gap-3" ref={viewMoreRef}>
         {startIndex < projects.length && (
           <div>
@@ -153,8 +154,7 @@ const CodeupProjects = () => {
               <button
                 onClick={handleViewMore}
                 className={`px-6 py-2 rounded-md text-white transition duration-300 
-                  bg-gradient-to-l 
-                  ${
+                  bg-gradient-to-l ${
                     isDarkMode
                       ? "from-blue-500 via-purple-500 to-indigo-500"
                       : "from-pink-500 to-red-500"
@@ -171,8 +171,7 @@ const CodeupProjects = () => {
             <button
               onClick={handleViewLess}
               className={`px-6 py-2 rounded-md text-white transition duration-300 
-                bg-gradient-to-l 
-                ${
+                bg-gradient-to-l ${
                   isDarkMode
                     ? "from-blue-500 via-purple-500 to-indigo-500"
                     : "from-pink-500 to-red-500"
