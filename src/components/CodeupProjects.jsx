@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { FaMobileAlt, FaMobile } from "react-icons/fa";
+import { useSelector } from "react-redux";
 import project1 from "../../src/assets/cell.webp";
 import project2 from "../../src/assets/pakdream.webp";
 import project3 from "../../src/assets/bux.webp";
 import project4 from "../../src/assets/ikram.webp";
-import { useSelector, useDispatch } from "react-redux";
 import digi247 from "../../src/assets/247.webp";
 import adfnco from "../../src/assets/adfnco.webp";
 import alibhai from "../../src/assets/alibhai.webp";
@@ -26,11 +26,11 @@ import tabib from "../../src/assets/tabib.webp";
 import kamran from "../../src/assets/kamran.webp";
 
 const CodeupProjects = () => {
-
-const dispatch = useDispatch();
-const isDarkMode = useSelector((state) => state.theme.isDarkMode); 
+  const isDarkMode = useSelector((state) => state.theme.isDarkMode);
   const [isSingleColumn, setIsSingleColumn] = useState(false);
-  const [showAll, setShowAll] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [startIndex, setStartIndex] = useState(6); // Start at index 6 for the next batch
+  const viewMoreRef = useRef(null); // ref for anchoring
 
   const projects = [
     { image: project1, link: "https://celleducation.online/" },
@@ -57,18 +57,34 @@ const isDarkMode = useSelector((state) => state.theme.isDarkMode);
     { image: kamran, link: "https://kamranmalikevents.com/" },
     { image: tabib, link: "https://afringroupoftabib.com/" },
   ];
-  
 
-  const visibleProjects = showAll ? projects : projects.slice(0, 6);
+  const visibleProjects = projects.slice(0, startIndex);
+
+  const handleViewMore = () => {
+    setLoading(true);
+    setTimeout(() => {
+      setStartIndex(startIndex + 6);
+      setLoading(false);
+    }, 1000);
+  };
+
+  const handleViewLess = () => {
+    setStartIndex((prev) => Math.max(6, prev - 6));
+    setTimeout(() => {
+      viewMoreRef.current?.scrollIntoView({ behavior: "smooth" });
+    }, 100); // Delay for smoother effect
+  };
 
   return (
     <div className="p-4">
-      {/* Icons - visible only on mobile */}
-      <div className="flex justify-end gap-4 mb-4 md:hidden ">
+      {/* Toggle Icons - mobile only */}
+      <div className="flex justify-end gap-4 mb-4 md:hidden">
         <div
           onClick={() => setIsSingleColumn(false)}
           className={`cursor-pointer p-2 rounded-lg flex shadow-lg shadow-gray-700 ${
-            !isSingleColumn ? "bg-gradient-to-l from-blue-600 to-gray-500 text-white" : "bg-gray-200 text-gray-800"
+            !isSingleColumn
+              ? "bg-gradient-to-l from-blue-600 to-gray-500 text-white"
+              : "bg-gray-200 text-gray-800"
           }`}
         >
           <FaMobileAlt size={24} />
@@ -77,8 +93,10 @@ const isDarkMode = useSelector((state) => state.theme.isDarkMode);
 
         <div
           onClick={() => setIsSingleColumn(true)}
-          className={`cursor-pointer p-2 rounded-lg shadow-lg shadow-gray-700  ${
-            isSingleColumn ? "bg-gradient-to-r from-blue-600 to-gray-500 text-white" : "bg-gray-200 text-gray-800"
+          className={`cursor-pointer p-2 rounded-lg shadow-lg shadow-gray-700 ${
+            isSingleColumn
+              ? "bg-gradient-to-r from-blue-600 to-gray-500 text-white"
+              : "bg-gray-200 text-gray-800"
           }`}
         >
           <FaMobile size={24} />
@@ -105,7 +123,7 @@ const isDarkMode = useSelector((state) => state.theme.isDarkMode);
         </div>
       )}
 
-      {/* Mobile (2-cols) and Desktop (3-cols) */}
+      {/* Multi-column for desktop/tablet */}
       {!isSingleColumn && (
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           {visibleProjects.map((project, index) => (
@@ -125,22 +143,49 @@ const isDarkMode = useSelector((state) => state.theme.isDarkMode);
         </div>
       )}
 
-      {/* View More Button */}
-      {!showAll && projects.length > 6 && (
-        <div className="flex justify-center mt-6">
-     <button
-  onClick={() => setShowAll(true)}
-  className={`px-6 py-2 rounded-md text-white transition duration-300 
-    bg-gradient-to-l 
-    ${isDarkMode 
-      ? 'from-blue-500 via-purple-500 to-indigo-500' 
-      : 'from-pink-500 to-red-500'
-    }`}
->
-  View More
-</button>
+      {/* View More / Less Buttons */}
+      <div className="flex justify-center items-center mt-6 gap-3" ref={viewMoreRef}>
+        {startIndex < projects.length && (
+          <div>
+            {loading ? (
+              <div className="text-center">Loading...</div>
+            ) : (
+              <button
+                onClick={handleViewMore}
+                className={`px-6 py-2 rounded-md text-white transition duration-300 
+                  bg-gradient-to-l 
+                  ${
+                    isDarkMode
+                      ? "from-blue-500 via-purple-500 to-indigo-500"
+                      : "from-pink-500 to-red-500"
+                  }`}
+              >
+                View More
+              </button>
+            )}
+          </div>
+        )}
 
-        </div>
+        {startIndex > 6 && (
+          <div>
+            <button
+              onClick={handleViewLess}
+              className={`px-6 py-2 rounded-md text-white transition duration-300 
+                bg-gradient-to-l 
+                ${
+                  isDarkMode
+                    ? "from-blue-500 via-purple-500 to-indigo-500"
+                    : "from-pink-500 to-red-500"
+                }`}
+            >
+              View Less
+            </button>
+          </div>
+        )}
+      </div>
+
+      {startIndex >= projects.length && (
+        <div className="text-center mt-4 text-gray-500">End of Content</div>
       )}
     </div>
   );
