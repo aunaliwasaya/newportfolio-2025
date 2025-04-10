@@ -74,7 +74,7 @@ const CodeupProjects = () => {
     setTimeout(() => {
       setStartIndex((prev) => Math.min(prev + 4, projects.length));
       setLoading(false);
-    }, 1000);
+    }, 1500);
   };
 
   const handleViewLess = () => {
@@ -172,7 +172,7 @@ const CodeupProjects = () => {
       <div className="flex justify-center items-center mt-6 gap-3" ref={viewMoreRef}>
         {startIndex < projects.length && (
           <div>
-            {loading ? (
+            {/* {loading ? (
               <div className="text-center">Loading...</div>
             ) : (
               <button
@@ -186,7 +186,48 @@ const CodeupProjects = () => {
               >
                 View More
               </button>
-            )}
+            )} */}
+            <button
+  onClick={handleViewMore}
+  disabled={loading}
+  className={`px-6 py-2 rounded-md text-white transition duration-300 flex items-center justify-center gap-2
+    bg-gradient-to-l ${
+      isDarkMode
+        ? "from-blue-500 via-purple-500 to-indigo-500"
+        : "from-pink-500 to-red-500"
+    }
+    ${loading ? "opacity-50 cursor-not-allowed" : "hover:to-pink-300"}
+  `}
+>
+  {loading ? (
+    <>
+      <svg
+        className="animate-spin h-5 w-5 text-white"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+      >
+        <circle
+          className="opacity-25"
+          cx="12"
+          cy="12"
+          r="10"
+          stroke="currentColor"
+          strokeWidth="4"
+        ></circle>
+        <path
+          className="opacity-75"
+          fill="currentColor"
+          d="M4 12a8 8 0 018-8v8H4z"
+        ></path>
+      </svg>
+      Loading...
+    </>
+  ) : (
+    "View More"
+  )}
+</button>
+
           </div>
         )}
 
