@@ -46,23 +46,24 @@ const CodeupProjects = () => {
     { image: drfiora, link: "https://drfiora.com" },
     { image: geomobile, link: "https://geomobiles.pk" },
     { image: adfnco, link: "https://adfandco.org" },
+    { image: digi247, link: "https://247marketingservices.com/" },
     { image: alibhai, link: "https://alibhaitraders.com/" },
     { image: arshi, link: "https://arshijewel.com" },
     { image: hareem, link: "https://haremleathercollection.com" },
-    { image: project2, link: "https://pakdreamhome.site" },
+    { image: kingtoys, link: "https://kingtoys.store" },
+    { image: nightblush, link: "https://nightblush.com" },
     { image: project3, link: "https://buxsongroup.com/" },
     { image: project4, link: "https://ikramelectronics.com/" },
     { image: reesha, link: "https://reeshapk.com" },
     { image: joharimmi, link: "https://aljuharimmigration.com" },
-    { image: kingtoys, link: "https://kingtoys.store" },
-    { image: nightblush, link: "https://nightblush.com" },
+    { image: project2, link: "https://pakdreamhome.site" },
     { image: construct, link: "https://constructestimating.us" },
     { image: dollar, link: "https://dollarearningpro.com" },
     { image: oneclick, link: "https://oneclickprinters.com" },
     { image: hydra2, link: "https://techyardgrowthsolutions.com" },
     { image: hydraauto, link: "https://techyardautomation.com" },
     { image: nitrotech, link: "https://nitrotechmachines.com" },
-    { image: digi247, link: "https://247marketingservices.com/" },
+   
     
    
   ];
