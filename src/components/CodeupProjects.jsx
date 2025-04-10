@@ -42,7 +42,7 @@ const CodeupProjects = () => {
     { image: project1, link: "https://celleducation.online/" },
     { image: kamran, link: "https://kamranmalikevents.com/" },
     { image: tabib, link: "https://afringroupoftabib.com/" },
-    { image: brandwithfriends, link: "https://brandwithfriends.store/" },
+    { image: brandwithfriends, link: "https://brandswithfriends.store/" },
     { image: drfiora, link: "https://drfiora.com" },
     { image: geomobile, link: "https://geomobiles.pk" },
     { image: adfnco, link: "https://adfandco.org" },
