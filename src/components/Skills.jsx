@@ -34,8 +34,8 @@ const Skills = () => {
 
   // Set styles based on dark mode, including gradient backgrounds
   const sectionBackground = isDarkMode
-    ? "bg-gradient-to-r from-white to-blue-800" // Gradient for dark mode
-    : "bg-gradient-to-r from-pink-400 to-red-500"; // Gradient for light mode
+    ? "bg-gradient-to-l from-gray-500 to-gray-800" // Gradient for dark mode
+    : "bg-gradient-to-r from-gray-400 to-white"; // Gradient for light mode
 
 
 
