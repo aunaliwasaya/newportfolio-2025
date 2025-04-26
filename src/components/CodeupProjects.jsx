@@ -271,7 +271,7 @@ const CodeupProjects = () => {
 </div> */}
 
 <div  className="flex justify-end gap-4 mb-4 sticky top-24 z-50">
-        <div ref={topRef}
+        <div 
           onClick={() => {
             setIsSingleColumn(false);
             scrollToTop(); // scroll to top on two column view
