@@ -272,7 +272,7 @@ const CodeupProjects = () => {
   </div>
 </div> */}
 
-<div  className="flex justify-end gap-4 mb-10 sm:mb-4 sticky top-20 z-50">
+<div  className="flex justify-end gap-4 mb-10 sm:mb-4 sticky top-24 z-50">
         <div 
           onClick={() => {
             setIsSingleColumn(false);
