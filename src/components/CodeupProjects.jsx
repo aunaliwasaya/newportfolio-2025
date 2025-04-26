@@ -352,7 +352,7 @@ const CodeupProjects = () => {
           <img
             src={project.image}
             alt={`Project ${index + 1}`}
-            className="w-[85%] sm:w-[92%] h-[300px] sm:h-[250px] md:h-[400px] object-contain rounded-lg shadow-md hover:scale-105 transition-transform duration-300"
+            className="mx-auto w-[85%] sm:w-[92%] h-[300px] sm:h-[250px] md:h-[400px] object-contain rounded-lg shadow-md hover:scale-105 transition-transform duration-300"
           />
         </a>
       );
