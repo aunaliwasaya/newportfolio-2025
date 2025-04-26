@@ -302,7 +302,8 @@ const CodeupProjects = () => {
 
 
       {/* Projects */}
-      {isSingleColumn ? (
+{/* Projects */}
+{isSingleColumn ? (
   <div className="flex flex-col gap-8">
     {visibleProjects.map((project, index) => {
       const isLastVisible = index === visibleProjects.length - 1;
@@ -320,7 +321,7 @@ const CodeupProjects = () => {
             <img
               src={project.image}
               alt={`Project ${index + 1}`}
-              className="w-[300px] h-[500px] object-cover rounded-lg"
+              className="w-full h-[480px] md:h-[500px] object-cover rounded-lg"
             />
           </div>
 
@@ -346,17 +347,19 @@ const CodeupProjects = () => {
           target="_blank"
           rel="noopener noreferrer"
           ref={isLastVisible ? lastProjectRef : null}
+          className="block"
         >
           <img
             src={project.image}
             alt={`Project ${index + 1}`}
-            className="w-full h-[400px] object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300"
+            className="w-full h-[300px] sm:h-[250px] md:h-[300px] object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300"
           />
         </a>
       );
     })}
   </div>
 )}
+
 
 
       {/* Buttons */}
