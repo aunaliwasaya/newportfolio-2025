@@ -321,7 +321,7 @@ const CodeupProjects = () => {
             <img
               src={project.image}
               alt={`Project ${index + 1}`}
-              className="w-full h-[500px] md:h-[500px] object-cover rounded-lg"
+              className="w-full h-[500px] md:h-[750px] object-cover rounded-lg"
             />
           </div>
 
@@ -337,7 +337,7 @@ const CodeupProjects = () => {
     })}
   </div>
 ) : (
-  <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-8">
+  <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-8">
     {visibleProjects.map((project, index) => {
       const isLastVisible = index === visibleProjects.length - 1;
       return (
@@ -352,7 +352,7 @@ const CodeupProjects = () => {
           <img
             src={project.image}
             alt={`Project ${index + 1}`}
-            className="w-full h-[300px] sm:h-[250px] md:h-[300px] object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300"
+            className="w-full h-[300px] sm:h-[250px] md:h-[480px] object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300"
           />
         </a>
       );
