@@ -1,5 +1,6 @@
 
 
+
 import React, { useState, useRef } from "react";
 import { FaMobileAlt, FaMobile } from "react-icons/fa";
 import { useSelector } from "react-redux";
@@ -36,37 +37,179 @@ const CodeupProjects = () => {
   const [loading, setLoading] = useState(false);
   const [startIndex, setStartIndex] = useState(4);
   const viewMoreRef = useRef(null);
-  const lastProjectRef = useRef(null); // ✅ Add this
-
+  const lastProjectRef = useRef(null);
   const projects = [
-    { image: project1, link: "https://celleducation.online/" },
-    { image: kamran, link: "https://kamranmalikevents.com/" },
-    { image: tabib, link: "https://afringroupoftabib.com/" },
-    { image: brandwithfriends, link: "https://brandswithfriends.store/" },
-    { image: drfiora, link: "https://drfiora.com" },
-    { image: geomobile, link: "https://geomobiles.pk" },
-    { image: adfnco, link: "https://adfandco.org" },
-    { image: digi247, link: "https://247marketingservices.com/" },
-    { image: alibhai, link: "https://alibhaitraders.com/" },
-    { image: arshi, link: "https://arshijewel.com" },
-    { image: hareem, link: "https://haremleathercollection.com" },
-    { image: kingtoys, link: "https://kingtoys.store" },
-    { image: nightblush, link: "https://nightblush.com" },
-    { image: project3, link: "https://buxsongroup.com/" },
-    { image: project4, link: "https://ikramelectronics.com/" },
-    { image: reesha, link: "https://reeshapk.com" },
-    { image: joharimmi, link: "https://aljuharimmigration.com" },
-    { image: project2, link: "https://pakdreamhome.site" },
-    { image: construct, link: "https://constructestimating.us" },
-    { image: dollar, link: "https://dollarearningpro.com" },
-    { image: oneclick, link: "https://oneclickprinters.com" },
-    { image: hydra2, link: "https://techyardgrowthsolutions.com" },
-    { image: hydraauto, link: "https://techyardautomation.com" },
-    { image: nitrotech, link: "https://nitrotechmachines.com" },
-   
-    
-   
+    {
+      image: project1,
+      link: "https://celleducation.online/",
+      title: "Cell Education",
+      description:
+        "A dynamic Learning Management System (LMS) and Student Portal built with WordPress and Elementor. Featuring modern animations, intuitive navigation, and a visually engaging design, it delivers a seamless educational experience through interactive courses and user-friendly dashboards."
+    },
+    {
+      image: kamran,
+      link: "https://kamranmalikevents.com/",
+      title: "Kamran Malik Events",
+      description:
+        "An elegant and vibrant event management website created with WordPress and Elementor. Designed to showcase events, services, and booking options with a clean layout, interactive elements, and captivating visuals for an unforgettable visitor experience."
+    },
+    {
+      image: tabib,
+      link: "https://afringroupoftabib.com/",
+      title: "Afrin Group of Tabib",
+      description:
+        "A healthcare platform developed with WordPress and Elementor, connecting users to traditional healers. Featuring intuitive appointment booking, rich content layouts, and an inviting design focused on accessibility and user trust."
+    },
+    {
+      image: brandwithfriends,
+      link: "https://brandswithfriends.store/",
+      title: "Brands With Friends",
+      description:
+        "An attractive e-commerce store built using WordPress and Elementor. Designed with a modern shopping experience in mind, it highlights premium products with seamless navigation, stylish layouts, and smooth checkout flows."
+    },
+    {
+      image: drfiora,
+      link: "https://drfiora.com",
+      title: "Dr. Fiora",
+      description:
+        "A sophisticated medical services website built on WordPress and Elementor. Featuring elegant design, smooth navigation, service booking, and patient-focused content tailored to deliver trust and professionalism."
+    },
+    {
+      image: geomobile,
+      link: "https://geomobiles.pk",
+      title: "Geo Mobiles",
+      description:
+        "An online mobile store designed with WordPress and Elementor. With a bold, modern aesthetic and easy-to-browse product listings, it ensures a hassle-free shopping experience for mobile enthusiasts."
+    },
+    {
+      image: adfnco,
+      link: "https://adfandco.org",
+      title: "ADF & Co.",
+      description:
+        "A professional corporate website crafted with WordPress and Elementor, designed to highlight business solutions through clean layouts, corporate branding, and strategic content presentation."
+    },
+    {
+      image: digi247,
+      link: "https://247marketingservices.com/",
+      title: "24/7 Marketing Services",
+      description:
+        "A dynamic marketing agency website built with WordPress and Elementor, offering creative design, strategic service pages, and lead-generation-focused layouts to maximize conversions."
+    },
+    {
+      image: alibhai,
+      link: "https://alibhaitraders.com/",
+      title: "Alibhai Traders",
+      description:
+        "A sleek trading business website designed on WordPress and Elementor, combining strong branding with functional layouts to highlight products and services in a user-friendly manner."
+    },
+    {
+      image: arshi,
+      link: "https://arshijewel.com",
+      title: "Arshi Jewel",
+      description:
+        "A luxurious jewelry store website developed with WordPress and Elementor. Showcasing products with high-end visuals, elegant layouts, and smooth browsing experience to elevate brand prestige."
+    },
+    {
+      image: hareem,
+      link: "https://haremleathercollection.com",
+      title: "Harem Leather Collection",
+      description:
+        "An exclusive leather goods website crafted on WordPress and Elementor. Featuring minimalist design, stylish product galleries, and a premium online shopping experience."
+    },
+    {
+      image: kingtoys,
+      link: "https://kingtoys.store",
+      title: "King Toys",
+      description:
+        "A colorful and playful e-commerce site for toys, developed using WordPress and Elementor. Designed with lively animations, intuitive navigation, and a joyful shopping experience for all ages."
+    },
+    {
+      image: nightblush,
+      link: "https://nightblush.com",
+      title: "Night Blush",
+      description:
+        "An elegant fashion and lifestyle store built with WordPress and Elementor. Featuring chic product displays, stylish layouts, and a seamless, mobile-optimized shopping journey."
+    },
+    {
+      image: project3,
+      link: "https://buxsongroup.com/",
+      title: "Buxson Group",
+      description:
+        "A business portfolio website designed on WordPress and Elementor. Structured with a modern corporate aesthetic, service highlights, and a strong call-to-action approach for client engagement."
+    },
+    {
+      image: project4,
+      link: "https://ikramelectronics.com/",
+      title: "Ikram Electronics",
+      description:
+        "An electronics store website developed with WordPress and Elementor. Combining organized product listings with dynamic features and easy navigation for a seamless shopping experience."
+    },
+    {
+      image: reesha,
+      link: "https://reeshapk.com",
+      title: "Reesha PK",
+      description:
+        "A fashion retail website designed with WordPress and Elementor. Focused on stylish presentation, user-centric shopping flow, and a visually captivating design for an elevated online store experience."
+    },
+    {
+      image: joharimmi,
+      link: "https://aljuharimmigration.com",
+      title: "Al Johar Immigration",
+      description:
+        "An immigration consultancy website built with WordPress and Elementor. Tailored with professional service pages, engaging layouts, and strong calls to action for better client conversions."
+    },
+    {
+      image: project2,
+      link: "https://pakdreamhome.site",
+      title: "Pak Dream Home",
+      description:
+        "A real estate solutions website crafted with WordPress and Elementor. Designed with property listings, smooth navigation, and modern visuals to help users find their dream home effortlessly."
+    },
+    {
+      image: construct,
+      link: "https://constructestimating.us",
+      title: "Construct Estimating",
+      description:
+        "A construction estimating services website built using WordPress and Elementor. Structured for clarity, professionalism, and lead generation with well-organized service pages."
+    },
+    {
+      image: dollar,
+      link: "https://dollarearningpro.com",
+      title: "Dollar Earning Pro",
+      description:
+        "An online earning and affiliate marketing platform developed on WordPress and Elementor, featuring clean layouts, engaging content, and optimized funnels for maximum user retention."
+    },
+    {
+      image: oneclick,
+      link: "https://oneclickprinters.com",
+      title: "One Click Printers",
+      description:
+        "A printing solutions website built with WordPress and Elementor. Offering intuitive service pages, instant quote options, and a modern design to attract business clients."
+    },
+    {
+      image: hydra2,
+      link: "https://techyardgrowthsolutions.com",
+      title: "Techyard Growth Solutions",
+      description:
+        "A business growth consultancy website crafted on WordPress and Elementor. Featuring innovative layouts, strategic service sections, and high-conversion landing pages."
+    },
+    {
+      image: hydraauto,
+      link: "https://techyardautomation.com",
+      title: "Techyard Automation",
+      description:
+        "An automation solutions company website built with WordPress and Elementor. Designed for professional service presentation, smooth interaction, and lead-driven results."
+    },
+    {
+      image: nitrotech,
+      link: "https://nitrotechmachines.com",
+      title: "Nitrotech Machines",
+      description:
+        "An industrial machinery website designed with WordPress and Elementor. Highlighting services and machinery products through powerful visuals, detailed content, and easy inquiry options."
+    },
   ];
+  
+  
 
   const visibleProjects = projects.slice(0, startIndex);
 
@@ -91,12 +234,48 @@ const CodeupProjects = () => {
     }, 100);
   };
 
+  const topRef = useRef(null);
+
+  const scrollToTop = () => {
+    if (topRef.current) {
+      topRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <div className="p-4">
-      {/* View toggle icons for mobile */}
-      <div className="flex justify-end gap-4 mb-4 md:hidden">
-        <div
-          onClick={() => setIsSingleColumn(false)}
+    <div className="p-4 relative">
+      
+      {/* View toggle buttons */}
+      {/* <div className="flex justify-end gap-4 mb-4 sticky top-24 z-50">
+  <div
+    onClick={() => setIsSingleColumn(false)}
+    className={`cursor-pointer p-2 rounded-lg flex shadow-lg shadow-gray-700 ${
+      !isSingleColumn
+        ? "bg-gradient-to-l from-blue-600 to-gray-500 text-white"
+        : "bg-gray-200 text-gray-800"
+    }`}
+  >
+    <FaMobileAlt size={24} />
+    <FaMobileAlt size={24} />
+  </div>
+  <div
+    onClick={() => setIsSingleColumn(true)}
+    className={`cursor-pointer p-2 rounded-lg shadow-lg shadow-gray-700 ${
+      isSingleColumn
+        ? "bg-gradient-to-r from-blue-600 to-gray-500 text-white"
+        : "bg-gray-200 text-gray-800"
+    }`}
+  >
+    <FaMobile size={24} />
+  </div>
+</div> */}
+
+<div  className="flex justify-end gap-4 mb-4 sticky top-24 z-50">
+        <div ref={topRef}
+          onClick={() => {
+            setIsSingleColumn(false);
+            scrollToTop(); // scroll to top on two column view
+          }}
           className={`cursor-pointer p-2 rounded-lg flex shadow-lg shadow-gray-700 ${
             !isSingleColumn
               ? "bg-gradient-to-l from-blue-600 to-gray-500 text-white"
@@ -107,7 +286,10 @@ const CodeupProjects = () => {
           <FaMobileAlt size={24} />
         </div>
         <div
-          onClick={() => setIsSingleColumn(true)}
+          onClick={() => {
+            setIsSingleColumn(true);
+            scrollToTop(); // also scroll to top on one column view if you want
+          }}
           className={`cursor-pointer p-2 rounded-lg shadow-lg shadow-gray-700 ${
             isSingleColumn
               ? "bg-gradient-to-r from-blue-600 to-gray-500 text-white"
@@ -118,53 +300,64 @@ const CodeupProjects = () => {
         </div>
       </div>
 
-      {/* Mobile View */}
-      {isSingleColumn && (
-        <div className="grid grid-cols-1 gap-4 md:hidden">
-          {visibleProjects.map((project, index) => {
-            const isLastVisible = index === visibleProjects.length - 1;
-            return (
-              <a
-                key={index}
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                ref={isLastVisible ? lastProjectRef : null}
-              >
-                <img
-                  src={project.image}
-                  alt={`Project ${index + 1}`}
-                  className="w-full h-auto rounded-lg shadow-md hover:scale-105 transition-transform duration-300 mb-5"
-                />
-              </a>
-            );
-          })}
-        </div>
-      )}
 
-      {/* Desktop/Tablet View */}
-      {!isSingleColumn && (
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-          {visibleProjects.map((project, index) => {
-            const isLastVisible = index === visibleProjects.length - 1;
-            return (
-              <a
-                key={index}
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                ref={isLastVisible ? lastProjectRef : null}
-              >
-                <img
-                  src={project.image}
-                  alt={`Project ${index + 1}`}
-                  className="w-full h-auto rounded-lg shadow-md hover:scale-105 transition-transform duration-300"
-                />
-              </a>
-            );
-          })}
-        </div>
-      )}
+      {/* Projects */}
+      {isSingleColumn ? (
+  <div className="flex flex-col gap-8">
+    {visibleProjects.map((project, index) => {
+      const isLastVisible = index === visibleProjects.length - 1;
+      return (
+        <a
+          key={index}
+          href={project.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          ref={isLastVisible ? lastProjectRef : null}
+          className="flex flex-col md:flex-row items-stretch gap-6 shadow-lg p-4 rounded-lg transition-transform duration-300"
+        >
+          {/* Image Section */}
+          <div className="w-full md:w-1/2 flex justify-center items-center">
+            <img
+              src={project.image}
+              alt={`Project ${index + 1}`}
+              className="w-[300px] h-[500px] object-cover rounded-lg"
+            />
+          </div>
+
+          {/* Text Section */}
+          <div className="w-full md:w-1/2 flex flex-col justify-center p-4">
+            <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+            <p className="text-gray-600 border rounded-md border-black p-5 shadow-md shadow-gray-500">
+              {project.description}
+            </p>
+          </div>
+        </a>
+      );
+    })}
+  </div>
+) : (
+  <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+    {visibleProjects.map((project, index) => {
+      const isLastVisible = index === visibleProjects.length - 1;
+      return (
+        <a
+          key={index}
+          href={project.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          ref={isLastVisible ? lastProjectRef : null}
+        >
+          <img
+            src={project.image}
+            alt={`Project ${index + 1}`}
+            className="w-full h-[400px] object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300"
+          />
+        </a>
+      );
+    })}
+  </div>
+)}
+
 
       {/* Buttons */}
       {startIndex >= projects.length && (
@@ -172,85 +365,64 @@ const CodeupProjects = () => {
       )}
       <div className="flex justify-center items-center mt-6 gap-3" ref={viewMoreRef}>
         {startIndex < projects.length && (
-          <div>
-            {/* {loading ? (
-              <div className="text-center">Loading...</div>
+          <button
+            onClick={handleViewMore}
+            disabled={loading}
+            className={`px-6 py-2 rounded-md text-white transition duration-300 flex items-center justify-center gap-2
+              bg-gradient-to-l ${
+                isDarkMode
+                  ? "from-blue-500 via-purple-500 to-indigo-500"
+                  : "from-pink-500 to-red-500"
+              }
+              ${loading ? "opacity-50 cursor-not-allowed" : "hover:to-pink-300"}
+            `}
+          >
+            {loading ? (
+              <>
+                <svg
+                  className="animate-spin h-5 w-5 text-white"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <circle
+                    className="opacity-25"
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="currentColor"
+                    strokeWidth="4"
+                  ></circle>
+                  <path
+                    className="opacity-75"
+                    fill="currentColor"
+                    d="M4 12a8 8 0 018-8v8H4z"
+                  ></path>
+                </svg>
+                Loading...
+              </>
             ) : (
-              <button
-                onClick={handleViewMore}
-                className={`px-6 py-2 rounded-md text-white transition duration-300 
-                  bg-gradient-to-l ${
-                    isDarkMode
-                      ? "from-blue-500 via-purple-500 to-indigo-500 hover:to-purple-300"
-                      : "from-pink-500 to-red-500 hover:to-pink-300"
-                  }`}
-              >
-                View More
-              </button>
-            )} */}
-            <button
-  onClick={handleViewMore}
-  disabled={loading}
-  className={`px-6 py-2 rounded-md text-white transition duration-300 flex items-center justify-center gap-2
-    bg-gradient-to-l ${
-      isDarkMode
-        ? "from-blue-500 via-purple-500 to-indigo-500"
-        : "from-pink-500 to-red-500"
-    }
-    ${loading ? "opacity-50 cursor-not-allowed" : "hover:to-pink-300"}
-  `}
->
-  {loading ? (
-    <>
-      <svg
-        className="animate-spin h-5 w-5 text-white"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-      >
-        <circle
-          className="opacity-25"
-          cx="12"
-          cy="12"
-          r="10"
-          stroke="currentColor"
-          strokeWidth="4"
-        ></circle>
-        <path
-          className="opacity-75"
-          fill="currentColor"
-          d="M4 12a8 8 0 018-8v8H4z"
-        ></path>
-      </svg>
-      Loading...
-    </>
-  ) : (
-    "View More"
-  )}
-</button>
-
-          </div>
+              "View More"
+            )}
+          </button>
         )}
 
         {startIndex > 6 && (
- <div>
- <button
-   onClick={handleViewLess}
-   className={`px-6 py-2 rounded-md text-white transition duration-300 
-     bg-gradient-to-r 
-     ${isDarkMode 
-       ? "from-red-800 to-red-500 hover:from-red-600 hover:to-red-300"
-       : "from-red-900 to-red-500 hover:from-red-700 hover:to-red-300"
-     }`}
- >
-   View Less
- </button>
-</div>
-
+          <button
+            onClick={handleViewLess}
+            className={`px-6 py-2 rounded-md text-white transition duration-300 
+              bg-gradient-to-r 
+              ${
+                isDarkMode
+                  ? "from-red-800 to-red-500 hover:from-red-600 hover:to-red-300"
+                  : "from-red-900 to-red-500 hover:from-red-700 hover:to-red-300"
+              }
+            `}
+          >
+            View Less
+          </button>
         )}
       </div>
-
-
     </div>
   );
 };
