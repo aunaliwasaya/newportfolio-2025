@@ -88,13 +88,7 @@ const CodeupProjects = () => {
       description:
         "A professional corporate website crafted with WordPress and Elementor, designed to highlight business solutions through clean layouts, corporate branding, and strategic content presentation."
     },
-    {
-      image: digi247,
-      link: "https://247marketingservices.com/",
-      title: "24/7 Marketing Services",
-      description:
-        "A dynamic marketing agency website built with WordPress and Elementor, offering creative design, strategic service pages, and lead-generation-focused layouts to maximize conversions."
-    },
+
     {
       image: alibhai,
       link: "https://alibhaitraders.com/",
@@ -187,6 +181,13 @@ const CodeupProjects = () => {
         "A printing solutions website built with WordPress and Elementor. Offering intuitive service pages, instant quote options, and a modern design to attract business clients."
     },
     {
+      image: digi247,
+      link: "https://247marketingservices.com/",
+      title: "24/7 Marketing Services",
+      description:
+        "A dynamic marketing agency website built with WordPress and Elementor, offering creative design, strategic service pages, and lead-generation-focused layouts to maximize conversions."
+    },
+    {
       image: hydra2,
       link: "https://techyardgrowthsolutions.com",
       title: "Techyard Growth Solutions",
@@ -207,6 +208,7 @@ const CodeupProjects = () => {
       description:
         "An industrial machinery website designed with WordPress and Elementor. Highlighting services and machinery products through powerful visuals, detailed content, and easy inquiry options."
     },
+
   ];
   
   
@@ -314,14 +316,14 @@ const CodeupProjects = () => {
           target="_blank"
           rel="noopener noreferrer"
           ref={isLastVisible ? lastProjectRef : null}
-          className="flex flex-col md:flex-row items-stretch gap-6 shadow-lg p-4 rounded-lg transition-transform duration-300"
+          className="flex flex-col md:flex-row items-stretch gap-6 transition-transform duration-300"
         >
           {/* Image Section */}
           <div className="w-full md:w-1/2 flex justify-center items-center">
             <img
               src={project.image}
               alt={`Project ${index + 1}`}
-              className="mx-auto w-full h-[500px] md:h-[480px] object-contain rounded-lg"
+              className="mx-auto w-full h-[500px] md:h-[480px] object-contain "
             />
           </div>
 
@@ -331,6 +333,9 @@ const CodeupProjects = () => {
             <p className="text-gray-600 border rounded-md border-black p-5 shadow-md shadow-gray-500">
               {project.description}
             </p>
+            <div className="border-b-orange-700 bg-gray-500 h-[1px] mt-10"></div>
+
+ 
           </div>
         </a>
       );
@@ -352,7 +357,7 @@ const CodeupProjects = () => {
           <img
             src={project.image}
             alt={`Project ${index + 1}`}
-            className="mx-auto w-[85%] sm:w-[92%] h-[300px] sm:h-[250px] md:h-[400px] object-contain rounded-lg shadow-md hover:scale-105 transition-transform duration-300"
+            className="mx-auto w-[85%] sm:w-[92%] h-[300px] sm:h-[250px] md:h-[400px] object-contain hover:scale-105 transition-transform duration-300"
           />
         </a>
       );
