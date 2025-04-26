@@ -321,7 +321,7 @@ const CodeupProjects = () => {
             <img
               src={project.image}
               alt={`Project ${index + 1}`}
-              className="w-full h-[500px] md:h-[480px] object-contain rounded-lg"
+              className="mx-auto w-full h-[500px] md:h-[480px] object-contain rounded-lg"
             />
           </div>
 
