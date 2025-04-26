@@ -272,7 +272,7 @@ const CodeupProjects = () => {
   </div>
 </div> */}
 
-<div  className="flex justify-end gap-4 mb-10 sm:mb-4 sticky top-24 z-50">
+<div  className="flex justify-end gap-4 mb-10 sm:mb-4 z-50">
         <div 
           onClick={() => {
             setIsSingleColumn(false);
@@ -357,7 +357,7 @@ const CodeupProjects = () => {
           <img
             src={project.image}
             alt={`Project ${index + 1}`}
-            className="mx-auto w-[85%] -mt-16 sm:-mt-0 sm:w-[92%] h-[300px] sm:h-[250px] md:h-[400px] object-contain hover:scale-105 transition-transform duration-300"
+            className="mx-auto w-[85%] -mt-12 sm:-mt-0 sm:w-[92%] h-[300px] sm:h-[250px] md:h-[400px] object-contain hover:scale-105 transition-transform duration-300"
           />
         </a>
       );
