@@ -316,14 +316,14 @@ const CodeupProjects = () => {
           target="_blank"
           rel="noopener noreferrer"
           ref={isLastVisible ? lastProjectRef : null}
-          className="flex flex-col md:flex-row items-stretch gap-6 transition-transform duration-300"
+          className="flex flex-col md:flex-row  gap-6 transition-transform duration-300"
         >
           {/* Image Section */}
           <div className="w-full md:w-1/2 flex justify-center items-center">
             <img
               src={project.image}
               alt={`Project ${index + 1}`}
-              className="mx-auto w-full h-[500px] md:h-[480px] object-contain "
+              className="mx-auto  w-full h-[500px] md:h-[480px] object-contain "
             />
           </div>
 
@@ -357,7 +357,7 @@ const CodeupProjects = () => {
           <img
             src={project.image}
             alt={`Project ${index + 1}`}
-            className="mx-auto w-[85%] sm:w-[92%] h-[300px] sm:h-[250px] md:h-[400px] object-contain hover:scale-105 transition-transform duration-300"
+            className="mx-auto w-[85%] -mt-16 sm:-mt-0 sm:w-[92%] h-[300px] sm:h-[250px] md:h-[400px] object-contain hover:scale-105 transition-transform duration-300"
           />
         </a>
       );
