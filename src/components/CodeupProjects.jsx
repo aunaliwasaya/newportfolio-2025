@@ -336,7 +336,7 @@ const CodeupProjects = () => {
     })}
   </div>
 ) : (
-  <div className="grid grid-cols-2 md:grid-cols-4 sm:gap-8">
+  <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-8">
     {visibleProjects.map((project, index) => {
       const isLastVisible = index === visibleProjects.length - 1;
       return (
