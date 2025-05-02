@@ -30,6 +30,10 @@ import reesha from "../../src/assets/reesha.webp";
 import tabib from "../../src/assets/tabib.webp";
 import kamran from "../../src/assets/kamran.webp";
 import brandwithfriends from "../../src/assets/brandwithfr.webp";
+import quran from "../../src/assets/quran-edu.webp";
+import trip from "../../src/assets/tripinsure.webp";
+import codeupsol from "../../src/assets/codeupsol.webp";
+import smayaz from "../../src/assets/smayaz.webp";
 
 const CodeupProjects = () => {
   const isDarkMode = useSelector((state) => state.theme.isDarkMode);
@@ -39,6 +43,35 @@ const CodeupProjects = () => {
   const viewMoreRef = useRef(null);
   const lastProjectRef = useRef(null);
   const projects = [
+
+    {
+      image: codeupsol,
+      link: "https://codeup.solutions/",
+      title: "Code Up Solutions ",
+      description:
+        "Codeup Solutions is my agency website, dedicated to helping you create stunning, high-performing websites tailored to your needs. Find me at Codeup Solutions and let’s build the best website you’ve ever had!"
+    },
+    {
+      image: quran,
+      link: "https://quraneducare.com/",
+      title: "Quran Education",
+      description:
+        "“Quran Education is an online learning platform I created to help students of all ages learn the Quran with expert guidance. With qualified mentors, personalized lessons, and a focus on Tajweed and understanding, it’s the perfect way to study the Quran from home.”."
+    },
+    {
+      image: trip,
+      link: "https://tripsinsure.pk/",
+      title: "Trips Insure",
+      description:
+        "“TripsInsure is a travel insurance platform created by AunAli to help you secure your journeys with confidence. Whether you're traveling for business or leisure, TripsInsure offers reliable coverage and peace of mind every step of the way.”"
+    },
+    {
+      image: smayaz,
+      link: "https://smayazahamad.site/",
+      title: "SM AYAZ AHMAD",
+      description:
+        "SM Ayaz Ahamed offers guidance in spiritual healing and transformative processes, while also teaching the Quran with care and expertise. This platform was created by me to help others find spiritual growth and deeper Quranic understanding."
+    },
     {
       image: project1,
       link: "https://celleducation.online/",
@@ -247,30 +280,7 @@ const CodeupProjects = () => {
   return (
     <div className="p-4 relative">
       
-      {/* View toggle buttons */}
-      {/* <div className="flex justify-end gap-4 mb-4 sticky top-24 z-50">
-  <div
-    onClick={() => setIsSingleColumn(false)}
-    className={`cursor-pointer p-2 rounded-lg flex shadow-lg shadow-gray-700 ${
-      !isSingleColumn
-        ? "bg-gradient-to-l from-blue-600 to-gray-500 text-white"
-        : "bg-gray-200 text-gray-800"
-    }`}
-  >
-    <FaMobileAlt size={24} />
-    <FaMobileAlt size={24} />
-  </div>
-  <div
-    onClick={() => setIsSingleColumn(true)}
-    className={`cursor-pointer p-2 rounded-lg shadow-lg shadow-gray-700 ${
-      isSingleColumn
-        ? "bg-gradient-to-r from-blue-600 to-gray-500 text-white"
-        : "bg-gray-200 text-gray-800"
-    }`}
-  >
-    <FaMobile size={24} />
-  </div>
-</div> */}
+
 
 <div  className="flex justify-end gap-4 mb-10 sm:mb-4 z-50">
         <div 
