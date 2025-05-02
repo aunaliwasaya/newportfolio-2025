@@ -67,7 +67,7 @@ const CodeupProjects = () => {
     },
     {
       image: smayaz,
-      link: "https://smayazahamad.site/",
+      link: "https://smayazahmad.site/",
       title: "SM AYAZ AHMAD",
       description:
         "SM Ayaz Ahamed offers guidance in spiritual healing and transformative processes, while also teaching the Quran with care and expertise. This platform was created by me to help others find spiritual growth and deeper Quranic understanding."
