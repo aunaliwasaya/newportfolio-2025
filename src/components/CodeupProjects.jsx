@@ -34,6 +34,17 @@ import quran from "../../src/assets/quran-edu.webp";
 import trip from "../../src/assets/tripinsure.webp";
 import codeupsol from "../../src/assets/codeupsol.webp";
 import smayaz from "../../src/assets/smayaz.webp";
+import samix from "../../src/assets/samix.webp";
+import vilnicius from "../../src/assets/vilnicius.webp";
+import arrian from "../../src/assets/arrian.webp";
+import coredecore from "../../src/assets/coredecore.webp";
+import moodking from "../../src/assets/moodking.webp";
+import arkhotel from "../../src/assets/arkhotel.webp";
+import gulraizart from "../../src/assets/gulraizart.webp";
+import bedfud from "../../src/assets/bedfud.webp";
+import shahjee from "../../src/assets/shajee.webp";
+import isparkly from "../../src/assets/isparkly.webp";
+import fgtraders from "../../src/assets/fgtraders.webp";
 
 const CodeupProjects = () => {
   const isDarkMode = useSelector((state) => state.theme.isDarkMode);
@@ -43,6 +54,84 @@ const CodeupProjects = () => {
   const viewMoreRef = useRef(null);
   const lastProjectRef = useRef(null);
   const projects = [
+
+        {
+      image: fgtraders,
+      link: "https://Fgtraders.store/",
+      title: "FG Traders ",
+      description:
+        "Kitchen Items"
+    },
+        {
+      image: isparkly,
+      link: "https://Isparkly.com/",
+      title: "isparkly",
+      description:
+        "Every thing You need !"
+    },
+        {
+      image: shahjee,
+      link: "https://Shahjee1autos.com/",
+      title: "Shahjee 1 Autos ",
+      description:
+        "Auto Parts website"
+    },
+        {
+      image: bedfud,
+      link: "https://becfudhighendstreetwear.com",
+      title: "becfud High End Street Wear ",
+      description:
+        "High End Street Wear T shirts and much More for Boys"
+    },
+        {
+      image: gulraizart,
+      link: "https://gulraizartstudio.com",
+      title: "Gulraiz Art Studio ",
+      description:
+        "Paintings , Art and Craft Website"
+    },
+        {
+      image: arkhotel,
+      link: "https://arkhotelsupply.com",
+      title: "Ark Hotel Supply ",
+      description:
+        "Hotel Furniture Supply Vendor Website"
+    },
+        {
+      image: moodking,
+      link: "https://Moodking.pk/",
+      title: "Moodking.pk ",
+      description:
+        "Perfume Brand Website"
+    },
+        {
+      image: coredecore,
+      link: "https://evonlogistics.com/",
+      title: "Evon Logistics ",
+      description:
+        "Decoration Items website "
+    },
+    {
+      image: arrian,
+      link: "https://Arraintraders.com/",
+      title: "Arrain Traders ",
+      description:
+        "Medical and surgical supplies Business portfolio website "
+    },
+    {
+      image: samix,
+      link: "https://samixmedia.com/",
+      title: "Sami X Media ",
+      description:
+        "Website Development agency"
+    },
+    {
+      image: vilnicius,
+      link: "https://VilniusStarCompany.com/",
+      title: "Vilnius Star Company",
+      description:
+        "Ware houses,  Malls and Cars business portfolio website"
+    },
 
     {
       image: codeupsol,
