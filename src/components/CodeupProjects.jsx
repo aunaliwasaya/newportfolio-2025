@@ -57,7 +57,7 @@ const CodeupProjects = () => {
 
         {
       image: fgtraders,
-      link: "https://Fgtraders.store/",
+      link: "https://Fgtraders.store/shop",
       title: "FG Traders ",
       description:
         "Kitchen Items"
